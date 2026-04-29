@@ -1,0 +1,167 @@
+{
+  "meta": {
+    "lang": "en",
+    "name": "English",
+    "rtl": false,
+    "title": "RentCar - Premium Car Rental Service in Sarajevo and across Bosnia",
+    "description": "Experience premium car rental standards with professional service and maximum flexibility. RentCar - your reliable travel partner."
+  },
+  "nav": {
+    "home": "Home",
+    "explore_cars": "Explore Cars",
+    "about": "About Us",
+    "faq": "FAQ",
+    "testimonials": "Testimonials",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Reliable Car Rental in Sarajevo",
+    "description": "Affordable, clean and regularly maintained vehicles – fast and easy booking",
+    "cta_button": "Book Now",
+    "form": {
+      "car_type": "Vehicle Type",
+      "car_type_placeholder": "What vehicle are you looking for?",
+      "location": "Pickup Location",
+      "location_placeholder": "Airport, address or city",
+      "duration": "Rental Duration",
+      "duration_placeholder": "Number of days",
+      "search_button": "Search Vehicles"
+    }
+  },
+  "cars": {
+    "section_title": "Featured Cars",
+    "view_more": "View More",
+    "people": "People",
+    "gasoline": "Gasoline",
+    "automatic": "Automatic",
+    "manual": "Manual",
+    "per_month": "/month",
+    "rent_now": "Rent Now",
+    "add_to_favorites": "Add to Favorites"
+  },
+  "about": {
+    "title": "About Us",
+    "intro": "We offer reliable and well-maintained vehicles for all your travel needs in Bosnia and Herzegovina. Our goal is to provide a simple, safe and professional vehicle rental experience.",
+    "why_us_title": "Why Choose Us",
+    "why_us_item1": "Clean and regularly serviced vehicles",
+    "why_us_item2": "Fast and simple booking process",
+    "why_us_item3": "No hidden costs",
+    "why_us_item4": "Friendly and professional service",
+    "why_us_item5": "Vehicle pickup and delivery available",
+    "how_it_works_title": "How It Works",
+    "card1": {
+      "title": "Choose a Vehicle",
+      "text": "Browse our selection and choose the vehicle that suits your needs."
+    },
+    "card2": {
+      "title": "Contact Us or Send an Inquiry",
+      "text": "Write to us via the form, WhatsApp or call – we respond quickly."
+    },
+    "card3": {
+      "title": "Confirm Your Booking",
+      "text": "We agree on the date, location and rental terms – quickly and transparently."
+    },
+    "card4": {
+      "title": "Vehicle Pickup or Delivery",
+      "text": "Pickup at the agreed location or delivery to your address in BiH."
+    }
+  },
+  "faq": {
+    "title": "FAQ - Frequently Asked Questions",
+    "question1": "Are the vehicles insured?",
+    "answer1": "Yes, all vehicles have comprehensive insurance for maximum safety.",
+    "question2": "Can I drive the vehicle outside of Bosnia and Herzegovina?",
+    "answer2": "Yes, we allow driving abroad (e.g. Croatia and other regional countries), with prior arrangement.",
+    "question3": "How can I reserve a vehicle?",
+    "answer3": "You can make a reservation through the website or by direct contact.",
+    "question4": "Do you offer vehicle delivery?",
+    "answer4": "Yes, we deliver the vehicle to airports and any address in BiH."
+  },
+  "testimonials": {
+    "title": "References / Testimonials",
+    "testimonial1": {
+      "text": "Excellent service and professional approach. Highly recommended.",
+      "author": "Satisfied Customer"
+    },
+    "testimonial2": {
+      "text": "Simple, fast and reliable – exactly what you need when traveling.",
+      "author": "Satisfied Customer"
+    },
+    "testimonial3": {
+      "text": "Great vehicles and flexible conditions. We will definitely use the services again.",
+      "author": "Satisfied Customer"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "intro": "Have a question or want to reserve a vehicle? Write to us and we will respond as soon as possible.",
+    "form": {
+      "name_label": "Full Name *",
+      "name_placeholder": "Your full name",
+      "email_label": "Email Address *",
+      "email_placeholder": "your@email.com",
+      "phone_label": "Phone Number",
+      "phone_placeholder": "+387 ...",
+      "message_label": "Message *",
+      "message_placeholder": "Write your message or inquiry...",
+      "submit_button": "Send Message"
+    },
+    "info": {
+      "viber": "Viber",
+      "call_label": "Call / WhatsApp",
+      "email_label": "Email",
+      "location_label": "Location",
+      "location_text": "Sarajevo, Bosnia and Herzegovina",
+      "reserve_btn": "Reserve a Vehicle"
+    }
+  },
+  "footer": {
+    "brand_description": "All our vehicles are fully insured, regularly maintained and ready for safe and comfortable travel.",
+    "company_section": "Company",
+    "navigate_section": "Navigate",
+    "copyright": "© 2023 Prestige Auto Group. All rights reserved.",
+    "links": {
+      "our_fleet": "Our Fleet"
+    }
+  },
+  "auth": {
+    "signin": "Sign In",
+    "signup": "Sign Up",
+    "welcome_back": "Welcome Back",
+    "signin_subtitle": "Sign in to your account",
+    "create_account": "Create Account",
+    "signup_subtitle": "Join us today",
+    "email": "Email",
+    "email_placeholder": "your@email.com",
+    "password": "Password",
+    "password_placeholder": "••••••••",
+    "full_name": "Full Name",
+    "full_name_placeholder": "John Doe",
+    "confirm_password": "Confirm Password",
+    "confirm_password_placeholder": "••••••••",
+    "signin_button": "Sign In",
+    "create_account_button": "Create Account",
+    "forgot_password": "Forgot password?",
+    "have_account": "Already have an account?",
+    "no_account": "Don't have an account?",
+    "welcome_user": "Welcome, %name%!",
+    "logout": "Logout",
+    "my_favorites": "My Favorites",
+    "my_profile": "My Profile",
+    "login_required": "Please log in to continue",
+    "registration_success": "Account created successfully!",
+    "login_success": "Welcome back!",
+    "logout_success": "You have been logged out",
+    "error_invalid_credentials": "Invalid email or password",
+    "error_email_exists": "Email address is already registered",
+    "error_invalid_email": "Please enter a valid email address",
+    "error_password_mismatch": "Passwords do not match",
+    "error_password_length": "Password must be at least 6 characters",
+    "error_required_fields": "Please fill in all required fields",
+    "error_network": "Network error. Please try again",
+    "favorite_added": "Added to favorites",
+    "favorite_removed": "Removed from favorites",
+    "rental_request": "Your rental request for %car% %year% has been recorded!",
+    "rent_login_required": "Please log in to rent a vehicle"
+  }
+}

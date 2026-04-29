@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium rent-a-car usluga u Sarajevu i širom Bosne i Hercegovine. Pouzdana i moderna vozila, dostava na aerodrome i adrese širom BiH.">
+    <meta name="keywords" content="rent a car, Sarajevo, iznajmljivanje vozila, dostava na aerodrome, kasko osiguranje">
+    <meta name="author" content="Prestige Auto Group">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="/">
+    <link rel="stylesheet" href="index.css">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Prestige Auto Group - Rent a Car">
+    <meta property="og:description" content="Premium rent-a-car usluga u Sarajevu i širom Bosne i Hercegovine. Pouzdana i moderna vozila.">
+    <meta property="og:image" content="./viber_image_2026-04-22_11-03-51-142.jpg">
+    <meta property="og:url" content="/">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Prestige Auto Group - Rent a Car">
+    <meta name="twitter:description" content="Premium rent-a-car usluga u Sarajevu i širom Bosne i Hercegovine.">
+    <meta name="twitter:image" content="./viber_image_2026-04-22_11-03-51-142.jpg">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Prestige Auto Group - Car Rent Website</title>
+</head>
+<body>
+    <header class="header" data-header>
+        <div class="container">
+        <div class="overlay" data-overlay onclick="toggleMobileMenu()"></div>
+        <a href="#" class="logo">
+            <img src="viber_image_2026-04-22_11-03-51-142.jpg" alt="Prestige Car Rental Logo">
+        </a>
+
+        <nav class="navbar" data-navbar id="navbar">
+            <ul class="navbar-list">
+                <li>
+                    <a href="#home" class="navbar-link" data-nav-link data-i18n="nav.home" onclick="closeMobileMenu()">Home</a>
+                </li>
+                <li>
+                      <a href="#featured-car" class="navbar-link" data-nav-link data-i18n="nav.explore_cars" onclick="closeMobileMenu()">Explore cars</a>
+                </li>
+                <li>
+                    <a href="#about" class="navbar-link" data-nav-link data-i18n="nav.about" onclick="closeMobileMenu()">About Us</a>
+                </li>
+                <li>
+                    <a href="#faq" class="navbar-link" data-nav-link data-i18n="nav.faq" onclick="closeMobileMenu()">FAQ</a>
+                </li>
+                <li>
+                    <a href="#testimonials" class="navbar-link" data-nav-link data-i18n="nav.testimonials" onclick="closeMobileMenu()">Testimonials</a>
+                </li>
+                <li>
+                     <a href="#contact" class="navbar-link" data-nav-link data-i18n="nav.contact" onclick="closeMobileMenu()">Kontakt</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <div class="header-actions">
+                <div class="header-contact">
+                    <a href="tel:+38762880407" class="contact-link">+38762880407</a>
+                    <a href="viber://chat?number=%2B38762880407" class="contact-link viber-link" title="Viber">
+                        <svg class="viber-svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.4 0C5.1 0 0 4.8 0 10.7c0 3.3 1.6 6.3 4.1 8.2v3.6l3.4-1.9c1.2.3 2.5.5 3.9.5 6.3 0 11.4-4.8 11.4-10.7S17.7 0 11.4 0zm1.1 14.4l-2.9-3.1-5.6 3.1 6.2-6.6 3 3.1 5.5-3.1-6.2 6.6z"/></svg> <span data-i18n="contact.info.viber">Viber</span>
+                    </a>
+                    <span class="contact-time"></span>
+                </div>
+                <div class="lang-select">
+                    <label for="lang" class="visually-hidden">Language</label>
+                    <select id="lang" name="lang" aria-label="Language switcher" class="language-select">
+                        <option value="bs">Bosanski</option>
+                        <option value="sv">Svenska</option>
+                        <option value="en" selected>English</option>
+                        <option value="de">Deutsch</option>
+                        <option value="sq">Shqip</option>
+                        <option value="ar">العربية</option>
+                    </select>
+                </div>
+            </div>
+
+            <a href="#featured-car" class="btn explore-btn" aria-label="Explore Cars">
+                <ion-icon name="car-outline"></ion-icon>
+                <span class="aria-label-text" data-i18n="nav.explore_cars">Explore Cars</span>
+            </a>
+
+            <button class="nav-toggle-btn" id="menuToggle" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+                <span class="one"></span>
+                <span class="two"></span>
+                <span class="three"></span>
+            </button>
+        </div>
+
+        <script>
+            function toggleMobileMenu() {
+                const navbar = document.getElementById('navbar');
+                const overlay = document.querySelector('[data-overlay]');
+                const menuToggle = document.getElementById('menuToggle');
+
+                if (navbar && overlay && menuToggle) {
+                    navbar.classList.toggle('active');
+                    overlay.classList.toggle('active');
+                    menuToggle.classList.toggle('active');
+                }
+            }
+
+            function closeMobileMenu() {
+                const navbar = document.getElementById('navbar');
+                const overlay = document.querySelector('[data-overlay]');
+                const menuToggle = document.getElementById('menuToggle');
+
+                if (navbar && overlay && menuToggle) {
+                    navbar.classList.remove('active');
+                    overlay.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                }
+            }
+        </script>
+        </div>
+    </header>
+
+
+
+    <main>
+
+        <article>
+            <section class="section hero" id="home">
+                <div class="hero-content">
+                    <h2 class="h1 hero-title" data-i18n="hero.title">Pouzdan rent-a-car u Sarajevu</h2>
+                    <p class="hero-text" data-i18n="hero.description">
+                        Povoljna, čista i redovno održavana vozila – brza i jednostavna rezervacija
+                    </p>
+                    <a href="#contact" class="btn hero-cta-btn" data-i18n="hero.cta_button">Rezerviši odmah</a>
+                </div>
+
+                <div class="hero-banner">
+                    <img src="hero-banner.jpg" alt="Rent-a-car Sarajevo" class="hero-banner-img">
+                </div>
+            </section>
+        </article>
+
+
+        <section class="section featured-car" id="featured-car">
+            <div class="container">
+                <div class="title-wrapper">
+                    <h2 class="h2 section-title" data-i18n="cars.section_title">Featured Cars</h2>
+
+                    <a href="#" class="featured-car-link">
+                        <span data-i18n="cars.view_more">View more</span>
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </a>
+                </div>
+
+                <ul class="featured-car-list">
+
+                    <li>
+                        <div class="featured-car-card">
+                            <figure class="card-banner">
+                                <img src="./images/car-1.jpg" alt="Škoda Karoq 2018" loading="lazy" width="440" height="300" class="w-100">
+                            </figure>
+                            <div class="card-content">
+                                <div class="card-title-wrapper">
+                                    <h3 class="h3 card-title">Škoda Karoq</h3>
+                                </div>
+                                <data class="year" value="2018">2018</data>
+                            </div>
+                            <ul class="card-list">
+                                <li class="card-list-item">
+                                    <ion-icon name="people-outline"></ion-icon>
+                                    <span class="card-item-text">4 <span data-i18n="cars.people">People</span></span>
+                                </li>
+                                <li class="card-list-item">
+                                    <ion-icon name="flash-outline"></ion-icon>
+                                    <span class="card-item-text" data-i18n="cars.gasoline">Gasoline</span>
+                                </li>
+                                <li class="card-list-item">
+                                    <ion-icon name="speedometer-outline"></ion-icon>
+                                    <span class="card-item-text">6.8km / 1-litre</span>
+                                </li>
+                                <li class="card-list-item">
+                                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                                    <span class="card-item-text" data-i18n="cars.automatic">Automatik</span>
+                                </li>
+                            </ul>
+                            <div class="card-price-wrapper">
+                                <p class="card-price"><strong>$440</strong><span data-i18n="cars.per_month">/month</span></p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="featured-car-card">
+                            <figure class="card-banner">
+                                <img src="./images/car-2.jpg" alt="Volkswagen Polo 2019" loading="lazy" width="440" height="300" class="w-100">
+                            </figure>
+                            <div class="card-content">
+                                <div class="card-title-wrapper">
+                                    <h3 class="h3 card-title">Volkswagen Polo</h3>
+                                </div>
+                                <data class="year" value="2019">2019</data>
+                            </div>
+                            <ul class="card-list">
+                                <li class="card-list-item">
+                                    <ion-icon name="people-outline"></ion-icon>
+                                    <span class="card-item-text">5 <span data-i18n="cars.people">People</span></span>
+                                </li>
+                                <li class="card-list-item">
+                                    <ion-icon name="flash-outline"></ion-icon>
+                                    <span class="card-item-text" data-i18n="cars.gasoline">Gasoline</span>
+                                </li>
+                                <li class="card-list-item">
+                                    <ion-icon name="speedometer-outline"></ion-icon>
+                                    <span class="card-item-text">5.2km / 1-litre</span>
+                                </li>
+                                <li class="card-list-item">
+                                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                                    <span class="card-item-text" data-i18n="cars.automatic">Automatik</span>
+                                </li>
+                            </ul>
+                            <div class="card-price-wrapper">
+                                <p class="card-price"><strong>$350</strong><span data-i18n="cars.per_month">/month</span></p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="featured-car-card">
+                            <figure class="card-banner">
+                                <img src="./images/car-3.jpg" alt="Volvo V60 2019" loading="lazy" width="440" height="300" class="w-100">
+                            </figure>
+                            <div class="card-content">
+                                <div class="card-title-wrapper">
+                                    <h3 class="h3 card-title">Volvo V60</h3>
+                                </div>
+                                <data class="year" value="2019">2019</data>
+                            </div>
+                            <ul class="card-list">
+                                <li class="card-list-item">
+                                    <ion-icon name="people-outline"></ion-icon>
+                                    <span class="card-item-text">5 <span data-i18n="cars.people">People</span></span>
+                                </li>
+                                <li class="card-list-item">
+                                    <ion-icon name="flash-outline"></ion-icon>
+                                    <span class="card-item-text" data-i18n="cars.gasoline">Gasoline</span>
+                                </li>
+                                <li class="card-list-item">
+                                    <ion-icon name="speedometer-outline"></ion-icon>
+                                    <span class="card-item-text">6.5km / 1-litre</span>
+                                </li>
+                                <li class="card-list-item">
+                                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                                    <span class="card-item-text" data-i18n="cars.automatic">Automatik</span>
+                                </li>
+                            </ul>
+                            <div class="card-price-wrapper">
+                                <p class="card-price"><strong>$400</strong><span data-i18n="cars.per_month">/month</span></p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="featured-car-card">
+                            <figure class="card-banner">
+                                <img src="./images/car-4.jpg" alt="Volkswagen Polo 2016" loading="lazy" width="440" height="300" class="w-100">
+                            </figure>
+                            <div class="card-content">
+                                <div class="card-title-wrapper">
+                                    <h3 class="h3 card-title">Volkswagen Polo</h3>
+                                </div>
+                                <data class="year" value="2016">2016</data>
+                            </div>
+                            <ul class="card-list">
+                                <li class="card-list-item">
+                                    <ion-icon name="people-outline"></ion-icon>
+                                    <span class="card-item-text">5 <span data-i18n="cars.people">People</span></span>
+                                </li>
+                                <li class="card-list-item">
+                                    <ion-icon name="flash-outline"></ion-icon>
+                                    <span class="card-item-text" data-i18n="cars.gasoline">Gasoline</span>
+                                </li>
+                                <li class="card-list-item">
+                                    <ion-icon name="speedometer-outline"></ion-icon>
+                                    <span class="card-item-text">5.5km / 1-litre</span>
+                                </li>
+                                <li class="card-list-item">
+                                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                                    <span class="card-item-text" data-i18n="cars.manual">Manuelni</span>
+                                </li>
+                            </ul>
+                            <div class="card-price-wrapper">
+                                <p class="card-price"><strong>$620</strong><span data-i18n="cars.per_month">/month</span></p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="featured-car-card">
+                            <figure class="card-banner">
+                                <img src="./images/car-5.jpg" alt="Volkswagen Golf 2019" loading="lazy" width="440" height="300" class="w-100">
+                            </figure>
+                            <div class="card-content">
+                                <div class="card-title-wrapper">
+                                    <h3 class="h3 card-title">Volkswagen Golf</h3>
+                                </div>
+                                <data class="year" value="2019">2019</data>
+                            </div>
+                            <ul class="card-list">
+                                <li class="card-list-item">
+                                    <ion-icon name="people-outline"></ion-icon>
+                                    <span class="card-item-text">5 <span data-i18n="cars.people">People</span></span>
+                                </li>
+                                <li class="card-list-item">
+                                    <ion-icon name="flash-outline"></ion-icon>
+                                    <span class="card-item-text" data-i18n="cars.gasoline">Gasoline</span>
+                                </li>
+                                <li class="card-list-item">
+                                    <ion-icon name="speedometer-outline"></ion-icon>
+                                    <span class="card-item-text">5.8km / 1-litre</span>
+                                </li>
+                                <li class="card-list-item">
+                                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                                    <span class="card-item-text" data-i18n="cars.automatic">Automatik</span>
+                                </li>
+                            </ul>
+                            <div class="card-price-wrapper">
+                                <p class="card-price"><strong>$530</strong><span data-i18n="cars.per_month">/month</span></p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="featured-car-card">
+                            <figure class="card-banner">
+                                <img src="./images/car-6.jpg" alt="Volkswagen Polo 2018" loading="lazy" width="440" height="300" class="w-100">
+                            </figure>
+                            <div class="card-content">
+                                <div class="card-title-wrapper">
+                                    <h3 class="h3 card-title">Volkswagen Polo</h3>
+                                </div>
+                                <data class="year" value="2018">2018</data>
+                            </div>
+                            <ul class="card-list">
+                                <li class="card-list-item">
+                                    <ion-icon name="people-outline"></ion-icon>
+                                    <span class="card-item-text">5 <span data-i18n="cars.people">People</span></span>
+                                </li>
+                                <li class="card-list-item">
+                                    <ion-icon name="flash-outline"></ion-icon>
+                                    <span class="card-item-text" data-i18n="cars.gasoline">Gasoline</span>
+                                </li>
+                                <li class="card-list-item">
+                                    <ion-icon name="speedometer-outline"></ion-icon>
+                                    <span class="card-item-text">5.4km / 1-litre</span>
+                                </li>
+                                <li class="card-list-item">
+                                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                                    <span class="card-item-text" data-i18n="cars.automatic">Automatik</span>
+                                </li>
+                            </ul>
+                            <div class="card-price-wrapper">
+                                <p class="card-price"><strong>$490</strong><span data-i18n="cars.per_month">/month</span></p>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+
+
+        <section class="section get-start" id="about">
+            <div class="container">
+                <h2 class="h2 section-title" data-i18n="about.title">O nama</h2>
+                <p class="about-intro" data-i18n="about.intro">Nudimo pouzdana i dobro održavana vozila za sve vaše potrebe putovanja u Bosni i Hercegovini. Naš cilj je pružiti jednostavno, sigurno i profesionalno iskustvo najma vozila.</p>
+
+                <!-- Zašto odabrati nas -->
+                <div class="why-us">
+                    <h3 class="h3 why-us-title" data-i18n="about.why_us_title">Zašto odabrati nas</h3>
+                    <ul class="why-us-list">
+                        <li class="why-us-item">
+                            <ion-icon name="checkmark-circle-outline"></ion-icon>
+                            <span data-i18n="about.why_us_item1">Čista i redovno servisirana vozila</span>
+                        </li>
+                        <li class="why-us-item">
+                            <ion-icon name="checkmark-circle-outline"></ion-icon>
+                            <span data-i18n="about.why_us_item2">Brz i jednostavan proces rezervacije</span>
+                        </li>
+                        <li class="why-us-item">
+                            <ion-icon name="checkmark-circle-outline"></ion-icon>
+                            <span data-i18n="about.why_us_item3">Bez skrivenih troškova</span>
+                        </li>
+                        <li class="why-us-item">
+                            <ion-icon name="checkmark-circle-outline"></ion-icon>
+                            <span data-i18n="about.why_us_item4">Ljubazna i profesionalna usluga</span>
+                        </li>
+                        <li class="why-us-item">
+                            <ion-icon name="checkmark-circle-outline"></ion-icon>
+                            <span data-i18n="about.why_us_item5">Mogućnost preuzimanja i dostave vozila</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Kako funkcioniše -->
+                <h3 class="h3 how-it-works-title" data-i18n="about.how_it_works_title">Kako funkcioniše</h3>
+                <ul class="get-start-list">
+
+                    <li>
+                        <div class="get-start-card">
+                            <div class="card-icon icon-1">
+                                <ion-icon name="car-outline"></ion-icon>
+                            </div>
+                            <h3 class="h3 card-title" data-i18n="about.card1.title">Izaberite vozilo</h3>
+                            <p class="card-text" data-i18n="about.card1.text">Pregledajte našu ponudu i odaberite vozilo koje odgovara vašim potrebama.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="get-start-card">
+                            <div class="card-icon icon-2">
+                                <ion-icon name="chatbubble-outline"></ion-icon>
+                            </div>
+                            <h3 class="h3 card-title" data-i18n="about.card2.title">Kontaktirajte nas ili pošaljite upit</h3>
+                            <p class="card-text" data-i18n="about.card2.text">Pišite nam putem forme, WhatsApp-a ili pozovite – odgovaramo brzo.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="get-start-card">
+                            <div class="card-icon icon-3">
+                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                            </div>
+                            <h3 class="h3 card-title" data-i18n="about.card3.title">Potvrdite rezervaciju</h3>
+                            <p class="card-text" data-i18n="about.card3.text">Dogovorimo datum, lokaciju i uvjete najma – brzo i transparentno.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="get-start-card">
+                            <div class="card-icon icon-4">
+                                <ion-icon name="navigate-outline"></ion-icon>
+                            </div>
+                            <h3 class="h3 card-title" data-i18n="about.card4.title">Preuzimanje ili dostava vozila</h3>
+                            <p class="card-text" data-i18n="about.card4.text">Preuzimanje na dogovorenoj lokaciji ili dostava na vašu adresu u BiH.</p>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section faq" id="faq" aria-labelledby="faq-label">
+            <div class="container">
+                <h2 class="h2 section-title" id="faq-label" data-i18n="faq.title">FAQ - Često postavljana pitanja</h2>
+
+                <ul class="faq-list">
+                    <li class="faq-item" id="faq1">
+                        <button class="faq-question" onclick="toggleFAQ('faq1')">
+                            <h3 class="h3" data-i18n="faq.question1">Da li su vozila osigurana?</h3>
+                            <ion-icon name="chevron-down-outline" class="faq-icon"></ion-icon>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faq.answer1">Da, sva vozila imaju potpuno kasko osiguranje za maksimalnu sigurnost.</p>
+                        </div>
+                    </li>
+
+                    <li class="faq-item" id="faq2">
+                        <button class="faq-question" onclick="toggleFAQ('faq2')">
+                            <h3 class="h3" data-i18n="faq.question2">Da li mogu voziti vozilo van Bosne i Hercegovine?</h3>
+                            <ion-icon name="chevron-down-outline" class="faq-icon"></ion-icon>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faq.answer2">Da, omogućavamo vožnju u inostranstvu (npr. Hrvatska i druge zemlje regiona), uz prethodni dogovor.</p>
+                        </div>
+                    </li>
+
+                    <li class="faq-item" id="faq3">
+                        <button class="faq-question" onclick="toggleFAQ('faq3')">
+                            <h3 class="h3" data-i18n="faq.question3">Kako mogu rezervisati vozilo?</h3>
+                            <ion-icon name="chevron-down-outline" class="faq-icon"></ion-icon>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faq.answer3">Rezervaciju možete izvršiti putem web stranice ili direktnim kontaktom.</p>
+                        </div>
+                    </li>
+
+                    <li class="faq-item" id="faq4">
+                        <button class="faq-question" onclick="toggleFAQ('faq4')">
+                            <h3 class="h3" data-i18n="faq.question4">Da li nudite dostavu vozila?</h3>
+                            <ion-icon name="chevron-down-outline" class="faq-icon"></ion-icon>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faq.answer4">Da, vozilo dostavljamo na aerodrome i bilo koju adresu u BiH.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <script>
+                function toggleFAQ(faqId) {
+                    const faqItem = document.getElementById(faqId);
+                    const isActive = faqItem.classList.contains('active');
+
+                    // Close all other FAQ items
+                    const allFAQs = document.querySelectorAll('.faq-item');
+                    allFAQs.forEach(item => {
+                        if (item !== faqItem) {
+                            item.classList.remove('active');
+                        }
+                    });
+
+                    // Toggle current FAQ item
+                    faqItem.classList.toggle('active', !isActive);
+                }
+            </script>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section testimonials" id="testimonials" aria-labelledby="testimonials-label">
+            <div class="container">
+                <h2 class="h2 section-title" id="testimonials-label" data-i18n="testimonials.title">Reference / Svjedočanstva</h2>
+
+                <ul class="testimonials-list">
+                    <li class="testimonials-item">
+                        <div class="testimonials-card">
+                            <div class="testimonial-content">
+                                <p class="testimonial-text" data-i18n="testimonials.testimonial1.text">"Vrhunska usluga i profesionalan pristup. Sve preporuke."</p>
+                            </div>
+                            <div class="customer-info">
+                                <div class="customer-avatar">
+                                    <ion-icon name="person-outline"></ion-icon>
+                                </div>
+                                <p class="customer-name" data-i18n="testimonials.testimonial1.author">Zadovoljan kupac</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="testimonials-item">
+                        <div class="testimonials-card">
+                            <div class="testimonial-content">
+                                <p class="testimonial-text" data-i18n="testimonials.testimonial2.text">"Jednostavno, brzo i pouzdano – upravo ono što treba kada putujete."</p>
+                            </div>
+                            <div class="customer-info">
+                                <div class="customer-avatar">
+                                    <ion-icon name="person-outline"></ion-icon>
+                                </div>
+                                <p class="customer-name" data-i18n="testimonials.testimonial2.author">Zadovoljan kupac</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="testimonials-item">
+                        <div class="testimonials-card">
+                            <div class="testimonial-content">
+                                <p class="testimonial-text" data-i18n="testimonials.testimonial3.text">"Odlična vozila i fleksibilni uslovi. Sigurno ćemo ponovo koristiti usluge."</p>
+                            </div>
+                            <div class="customer-info">
+                                <div class="customer-avatar">
+                                    <ion-icon name="person-outline"></ion-icon>
+                                </div>
+                                <p class="customer-name" data-i18n="testimonials.testimonial3.author">Zadovoljan kupac</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <h2 class="h2 section-title" data-i18n="contact.title">Kontaktirajte nas</h2>
+                <p class="contact-intro" data-i18n="contact.intro">Imate pitanje ili želite rezervisati vozilo? Pišite nam i odgovoriti ćemo u najkraćem roku.</p>
+
+                <form class="contact-form" action="mailto:info@prestigeautogroup.ba" method="post" enctype="text/plain">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contact-name" class="form-label" data-i18n="contact.form.name_label">Ime i prezime *</label>
+                            <input type="text" id="contact-name" name="ime" class="form-input" data-i18n-placeholder="contact.form.name_placeholder" placeholder="Vaše ime i prezime" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email" class="form-label" data-i18n="contact.form.email_label">Email adresa *</label>
+                            <input type="email" id="contact-email" name="email" class="form-input" data-i18n-placeholder="contact.form.email_placeholder" placeholder="vas@email.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-phone" class="form-label" data-i18n="contact.form.phone_label">Broj telefona</label>
+                        <input type="tel" id="contact-phone" name="telefon" class="form-input" data-i18n-placeholder="contact.form.phone_placeholder" placeholder="+387 ...">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message" class="form-label" data-i18n="contact.form.message_label">Poruka *</label>
+                        <textarea id="contact-message" name="poruka" class="form-textarea" rows="5" data-i18n-placeholder="contact.form.message_placeholder" placeholder="Napišite vašu poruku ili upit..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn form-btn" data-i18n="contact.form.submit_button">Pošalji poruku</button>
+                </form>
+
+                <div class="contact-info-grid">
+                    <div class="contact-info-item">
+                        <ion-icon name="call-outline"></ion-icon>
+                        <div>
+                            <span class="contact-info-label" data-i18n="contact.info.call_label">Poziv / WhatsApp</span>
+                            <a href="tel:+38762880407">+387 62 880 407</a>
+                            <a href="https://wa.me/38762880407" target="_blank" rel="noopener" class="whatsapp-badge">
+                                <ion-icon name="logo-whatsapp"></ion-icon> WhatsApp
+                            </a>
+                            <a href="viber://chat?number=%2B38762880407" class="viber-badge">
+                                <svg class="viber-svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.4 0C5.1 0 0 4.8 0 10.7c0 3.3 1.6 6.3 4.1 8.2v3.6l3.4-1.9c1.2.3 2.5.5 3.9.5 6.3 0 11.4-4.8 11.4-10.7S17.7 0 11.4 0zm1.1 14.4l-2.9-3.1-5.6 3.1 6.2-6.6 3 3.1 5.5-3.1-6.2 6.6z"/></svg> Viber
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <div>
+                            <span class="contact-info-label" data-i18n="contact.info.email_label">Email</span>
+                            <a href="mailto:info@prestigeautogroup.ba">info@prestigeautogroup.ba</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <ion-icon name="location-outline"></ion-icon>
+                        <div>
+                            <span class="contact-info-label" data-i18n="contact.info.location_label">Lokacija</span>
+                            <span class="contact-info-text" data-i18n="contact.info.location_text">Sarajevo, Bosna i Hercegovina</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-cta">
+                    <a href="https://wa.me/38762880407" target="_blank" rel="noopener" class="btn contact-cta-btn">
+                        <ion-icon name="logo-whatsapp"></ion-icon>
+                        <span data-i18n="contact.info.reserve_btn">Rezerviši vozilo</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <a href="#" class="logo">
+                            <img src="viber_image_2026-04-22_11-03-51-142.jpg" alt="Prestige Auto Rental Logo">
+                        </a>
+                        <p class="footer-text" data-i18n="footer.brand_description">
+                            Sva naša vozila su potpuno kasko osigurana, redovno održavana i spremna za sigurno i udobno putovanje.
+                        </p>
+                    </div>
+
+                    <nav class="footer-nav" aria-label="Footer navigation">
+                        <ul class="footer-list">
+                            <li class="footer-list-title" data-i18n="footer.company_section">Company</li>
+                            <li><a href="#about" class="footer-link" data-i18n="nav.about">About Us</a></li>
+                            <li><a href="#featured-car" class="footer-link" data-i18n="footer.links.our_fleet">Our Fleet</a></li>
+                            <li><a href="#testimonials" class="footer-link" data-i18n="nav.testimonials">Testimonials</a></li>
+                            <li><a href="#contact" class="footer-link" data-i18n="nav.contact">Contact</a></li>
+                        </ul>
+
+                        <ul class="footer-list">
+                            <li class="footer-list-title" data-i18n="footer.navigate_section">Navigate</li>
+                            <li><a href="#home" class="footer-link" data-i18n="nav.home">Home</a></li>
+                            <li><a href="#faq" class="footer-link" data-i18n="nav.faq">FAQ</a></li>
+                            <li><a href="#featured-car" class="footer-link" data-i18n="nav.explore_cars">Explore Cars</a></li>
+                            <li><a href="#contact" class="footer-link" data-i18n="nav.contact">Kontakt</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer-bottom">
+                    <ul class="social-list" aria-label="Social links">
+                        <li>
+                            <a href="#" class="social-link" aria-label="Facebook">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                                <span class="visually-hidden">Facebook</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <ion-icon name="logo-instagram"></ion-icon>
+                                <span class="visually-hidden">Instagram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="social-link" aria-label="WhatsApp">
+                                <ion-icon name="logo-whatsapp"></ion-icon>
+                                <span class="visually-hidden">WhatsApp</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="viber://chat?number=%2B38762880407" class="social-link" aria-label="Viber">
+                                <svg class="viber-svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.4 0C5.1 0 0 4.8 0 10.7c0 3.3 1.6 6.3 4.1 8.2v3.6l3.4-1.9c1.2.3 2.5.5 3.9.5 6.3 0 11.4-4.8 11.4-10.7S17.7 0 11.4 0zm1.1 14.4l-2.9-3.1-5.6 3.1 6.2-6.6 3 3.1 5.5-3.1-6.2 6.6z"/></svg>
+                                <span class="visually-hidden">Viber</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <p class="copyright" data-i18n="footer.copyright">© <span id="year"></span> <span>Prestige Auto Group</span>. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+
+    <script src="index.js"></script>
+    <script src="i18n/i18n.js"></script>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <ion-icon name="chevron-up-outline"></ion-icon>
+    </button>
+    <script>
+        window.addEventListener('scroll', function() {
+            var btn = document.getElementById('back-to-top');
+            if (window.scrollY > 300) {
+                btn.style.opacity = '1';
+                btn.style.pointerEvents = 'all';
+            } else {
+                btn.style.opacity = '0';
+                btn.style.pointerEvents = 'none';
+            }
+        });
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

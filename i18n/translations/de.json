@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "lang": "de",
+    "name": "Deutsch",
+    "rtl": false,
+    "title": "RentCar - Premium Autovermietung in Sarajewo und Bosnien",
+    "description": "Erleben Sie höchste Standards bei der Fahrzeugvermietung mit professionellem Service und maximaler Flexibilität. RentCar - Ihr zuverlässiger Reisepartner."
+  },
+  "nav": {
+    "home": "Startseite",
+    "explore_cars": "Autos Erkunden",
+    "about": "Über Uns",
+    "faq": "FAQ",
+    "testimonials": "Bewertungen",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Zuverlässige Autovermietung in Sarajewo",
+    "description": "Günstige, saubere und regelmäßig gewartete Fahrzeuge – schnelle und einfache Buchung",
+    "cta_button": "Jetzt Buchen",
+    "form": {
+      "car_type": "Fahrzeugtyp",
+      "car_type_placeholder": "Welches Fahrzeug suchen Sie?",
+      "location": "Abholort",
+      "location_placeholder": "Flughafen, Adresse oder Stadt",
+      "duration": "Mietdauer",
+      "duration_placeholder": "Anzahl der Tage",
+      "search_button": "Fahrzeuge Suchen"
+    }
+  },
+  "cars": {
+    "section_title": "Beliebte Autos",
+    "view_more": "Mehr Anzeigen",
+    "people": "Personen",
+    "gasoline": "Benzin",
+    "automatic": "Automatik",
+    "manual": "Manuell",
+    "per_month": "/Monat",
+    "rent_now": "Jetzt Mieten",
+    "add_to_favorites": "Zu Favoriten Hinzufügen"
+  },
+  "about": {
+    "title": "Über Uns",
+    "intro": "Wir bieten zuverlässige und gut gewartete Fahrzeuge für alle Ihre Reisebedürfnisse in Bosnien und Herzegowina. Unser Ziel ist es, ein einfaches, sicheres und professionelles Fahrzeugmieterlebnis zu bieten.",
+    "why_us_title": "Warum Uns Wählen",
+    "why_us_item1": "Saubere und regelmäßig gewartete Fahrzeuge",
+    "why_us_item2": "Schneller und einfacher Buchungsprozess",
+    "why_us_item3": "Keine versteckten Kosten",
+    "why_us_item4": "Freundlicher und professioneller Service",
+    "why_us_item5": "Fahrzeugabholung und -lieferung verfügbar",
+    "how_it_works_title": "Wie Es Funktioniert",
+    "card1": {
+      "title": "Fahrzeug Auswählen",
+      "text": "Durchsuchen Sie unser Angebot und wählen Sie das Fahrzeug, das Ihren Bedürfnissen entspricht."
+    },
+    "card2": {
+      "title": "Kontaktieren Sie Uns oder Senden Sie eine Anfrage",
+      "text": "Schreiben Sie uns über das Formular, WhatsApp oder rufen Sie an – wir antworten schnell."
+    },
+    "card3": {
+      "title": "Buchung Bestätigen",
+      "text": "Wir vereinbaren Datum, Ort und Mietbedingungen – schnell und transparent."
+    },
+    "card4": {
+      "title": "Fahrzeugabholung oder -lieferung",
+      "text": "Abholung am vereinbarten Ort oder Lieferung an Ihre Adresse in BiH."
+    }
+  },
+  "faq": {
+    "title": "FAQ - Häufig Gestellte Fragen",
+    "question1": "Sind die Fahrzeuge versichert?",
+    "answer1": "Ja, alle Fahrzeuge haben eine Vollkaskoversicherung für maximale Sicherheit.",
+    "question2": "Kann ich das Fahrzeug außerhalb von Bosnien und Herzegowina fahren?",
+    "answer2": "Ja, wir erlauben das Fahren im Ausland (z.B. Kroatien und andere regionale Länder), nach vorheriger Absprache.",
+    "question3": "Wie kann ich ein Fahrzeug reservieren?",
+    "answer3": "Sie können eine Reservierung über die Website oder durch direkten Kontakt vornehmen.",
+    "question4": "Bieten Sie Fahrzeuglieferung an?",
+    "answer4": "Ja, wir liefern das Fahrzeug zu Flughäfen und jeder Adresse in BiH."
+  },
+  "testimonials": {
+    "title": "Referenzen / Testimonials",
+    "testimonial1": {
+      "text": "Exzellenter Service und professioneller Ansatz. Sehr empfehlenswert.",
+      "author": "Zufriedener Kunde"
+    },
+    "testimonial2": {
+      "text": "Einfach, schnell und zuverlässig – genau was Sie beim Reisen brauchen.",
+      "author": "Zufriedener Kunde"
+    },
+    "testimonial3": {
+      "text": "Großartige Fahrzeuge und flexible Bedingungen. Wir werden die Services definitiv wieder nutzen.",
+      "author": "Zufriedener Kunde"
+    }
+  },
+  "contact": {
+    "title": "Kontaktieren Sie Uns",
+    "intro": "Haben Sie eine Frage oder möchten Sie ein Fahrzeug reservieren? Schreiben Sie uns und wir antworten so schnell wie möglich.",
+    "form": {
+      "name_label": "Vollständiger Name *",
+      "name_placeholder": "Ihr vollständiger Name",
+      "email_label": "E-Mail-Adresse *",
+      "email_placeholder": "ihre@email.com",
+      "phone_label": "Telefonnummer",
+      "phone_placeholder": "+49 ...",
+      "message_label": "Nachricht *",
+      "message_placeholder": "Schreiben Sie Ihre Nachricht oder Anfrage...",
+      "submit_button": "Nachricht Senden"
+    },
+    "info": {
+      "viber": "Viber",
+      "call_label": "Anruf / WhatsApp",
+      "email_label": "E-Mail",
+      "location_label": "Standort",
+      "location_text": "Sarajewo, Bosnien und Herzegowina",
+      "reserve_btn": "Fahrzeug Reservieren"
+    }
+  },
+  "footer": {
+    "brand_description": "Alle unsere Fahrzeuge sind vollversichert, regelmäßig gewartet und bereit für sichere und komfortable Reisen.",
+    "company_section": "Unternehmen",
+    "navigate_section": "Navigieren",
+    "copyright": "© 2023 Prestige Auto Group. Alle Rechte vorbehalten.",
+    "links": {
+      "our_fleet": "Unsere Flotte"
+    }
+  },
+  "auth": {
+    "signin": "Anmelden",
+    "signup": "Registrieren",
+    "welcome_back": "Willkommen Zurück",
+    "signin_subtitle": "Bei Ihrem Konto anmelden",
+    "create_account": "Konto Erstellen",
+    "signup_subtitle": "Machen Sie heute mit",
+    "email": "E-Mail",
+    "email_placeholder": "ihre@email.com",
+    "password": "Passwort",
+    "password_placeholder": "••••••••",
+    "full_name": "Vollständiger Name",
+    "full_name_placeholder": "Max Mustermann",
+    "confirm_password": "Passwort Bestätigen",
+    "confirm_password_placeholder": "••••••••",
+    "signin_button": "Anmelden",
+    "create_account_button": "Konto Erstellen",
+    "forgot_password": "Passwort vergessen?",
+    "have_account": "Haben Sie bereits ein Konto?",
+    "no_account": "Haben Sie kein Konto?"
+  }
+}

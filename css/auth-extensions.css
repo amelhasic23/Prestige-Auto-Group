@@ -1,0 +1,470 @@
+/**
+ * Authentication System CSS Extensions
+ * Enhanced styling for user states, notifications, and form validation
+ */
+
+/* ========================================
+   Form Error States
+======================================== */
+
+.auth-input--error {
+    border-color: #e74c3c !important;
+    background-color: #fdf2f2 !important;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1) !important;
+}
+
+.auth-input--error:focus {
+    border-color: #e74c3c !important;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2) !important;
+}
+
+.auth-input-error {
+    margin-top: 0.5rem;
+    padding: 0.25rem 0;
+}
+
+.auth-input-error small {
+    color: #e74c3c;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.auth-input-error ion-icon {
+    font-size: 1rem;
+    color: #e74c3c;
+}
+
+/* ========================================
+   Form Error Container
+======================================== */
+
+.auth-errors {
+    background: linear-gradient(135deg, #fdf2f2, #fceaea);
+    border: 1px solid #e74c3c;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: none;
+    animation: slideDown 0.3s ease-out;
+}
+
+.auth-error-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.auth-error-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #c0392b;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.auth-error-item ion-icon {
+    font-size: 1.1rem;
+    color: #e74c3c;
+    flex-shrink: 0;
+}
+
+/* ========================================
+   Loading States
+======================================== */
+
+.auth-submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+}
+
+.auth-submit-btn:disabled ion-icon {
+    animation: spin 1s linear infinite;
+}
+
+.auth-input:disabled {
+    opacity: 0.7;
+    background-color: #f8f9fa;
+    cursor: not-allowed;
+}
+
+/* ========================================
+   Success States
+======================================== */
+
+.auth-input--success {
+    border-color: #27ae60 !important;
+    background-color: #f8fff8 !important;
+}
+
+.auth-input--success:focus {
+    box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1) !important;
+}
+
+/* ========================================
+   Notification System
+======================================== */
+
+.auth-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    max-width: 400px;
+    min-width: 300px;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.auth-notification--show {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: all;
+}
+
+.auth-notification-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border: 1px solid transparent;
+}
+
+.auth-notification--success .auth-notification-content {
+    background: linear-gradient(135deg, #d5f4e6, #c3f0d6);
+    color: #1e7e34;
+    border-color: #27ae60;
+}
+
+.auth-notification--error .auth-notification-content {
+    background: linear-gradient(135deg, #fdf2f2, #fceaea);
+    color: #721c24;
+    border-color: #e74c3c;
+}
+
+.auth-notification--info .auth-notification-content {
+    background: linear-gradient(135deg, #e3f2fd, #d1ecf1);
+    color: #0c5460;
+    border-color: #17a2b8;
+}
+
+.auth-notification ion-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.auth-notification--success ion-icon {
+    color: #27ae60;
+}
+
+.auth-notification--error ion-icon {
+    color: #e74c3c;
+}
+
+.auth-notification--info ion-icon {
+    color: #17a2b8;
+}
+
+.auth-notification-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+    margin-left: auto;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.auth-notification-close:hover {
+    opacity: 1;
+}
+
+/* ========================================
+   User Dropdown Menu
+======================================== */
+
+.user-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    min-width: 250px;
+    z-index: 1000;
+    display: none;
+    animation: dropdownFadeIn 0.2s ease-out;
+    overflow: hidden;
+}
+
+.user-dropdown-content {
+    padding: 0;
+}
+
+.user-info {
+    padding: 1.25rem;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-bottom: 1px solid #dee2e6;
+}
+
+.user-info strong {
+    display: block;
+    color: #212529;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.user-info small {
+    color: #6c757d;
+    font-size: 0.875rem;
+}
+
+.user-dropdown hr {
+    margin: 0;
+    border: none;
+    height: 1px;
+    background: #dee2e6;
+}
+
+.user-dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1.25rem;
+    color: #495057;
+    text-decoration: none;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.user-dropdown a:hover {
+    background: #f8f9fa;
+    color: #007bff;
+    transform: translateX(2px);
+}
+
+.user-dropdown a ion-icon {
+    font-size: 1.125rem;
+    opacity: 0.8;
+}
+
+.logout-link {
+    color: #dc3545 !important;
+}
+
+.logout-link:hover {
+    background: #f8f9fa !important;
+    color: #c82333 !important;
+}
+
+/* ========================================
+   Enhanced User Button States
+======================================== */
+
+.user-btn {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.user-btn[title*="Prijavljen"] {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    border-color: #28a745;
+}
+
+.user-btn[title*="Prijavljen"]:hover {
+    background: linear-gradient(135deg, #218838, #1ea080);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+/* ========================================
+   Enhanced Form Styling
+======================================== */
+
+.auth-form {
+    position: relative;
+}
+
+.auth-field {
+    margin-bottom: 1.25rem;
+}
+
+.auth-field:has(.auth-input--error) {
+    margin-bottom: 1rem;
+}
+
+.auth-input-wrap {
+    position: relative;
+}
+
+.auth-input-wrap ion-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+    font-size: 1.125rem;
+    transition: color 0.2s;
+    z-index: 2;
+}
+
+.auth-input:focus + ion-icon,
+.auth-input--success + ion-icon {
+    color: #007bff;
+}
+
+.auth-input--error + ion-icon {
+    color: #e74c3c;
+}
+
+/* ========================================
+   Responsive Design
+======================================== */
+
+@media (max-width: 768px) {
+    .auth-notification {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        max-width: none;
+        min-width: auto;
+    }
+
+    .user-dropdown {
+        right: -10px;
+        min-width: 220px;
+    }
+
+    .auth-notification-content {
+        padding: 0.875rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-dropdown {
+        position: fixed;
+        top: auto;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        min-width: auto;
+        border-radius: 16px;
+    }
+}
+
+/* ========================================
+   Animations
+======================================== */
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ========================================
+   Dark Mode Support (if applicable)
+======================================== */
+
+@media (prefers-color-scheme: dark) {
+    .user-dropdown {
+        background: #2c3e50;
+        border-color: #34495e;
+        color: #ecf0f1;
+    }
+
+    .user-info {
+        background: linear-gradient(135deg, #34495e, #2c3e50);
+        border-bottom-color: #34495e;
+    }
+
+    .user-info strong {
+        color: #ecf0f1;
+    }
+
+    .user-info small {
+        color: #bdc3c7;
+    }
+
+    .user-dropdown a {
+        color: #ecf0f1;
+    }
+
+    .user-dropdown a:hover {
+        background: #34495e;
+        color: #3498db;
+    }
+}
+
+/* ========================================
+   Accessibility Enhancements
+======================================== */
+
+.auth-notification:focus-within {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+.user-dropdown a:focus {
+    outline: 2px solid #007bff;
+    outline-offset: -2px;
+    background: #e3f2fd;
+}
+
+.auth-input--error:focus {
+    outline: 2px solid #e74c3c;
+    outline-offset: 2px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    .auth-notification,
+    .user-dropdown,
+    .auth-input,
+    .auth-submit-btn {
+        transition: none !important;
+        animation: none !important;
+    }
+}

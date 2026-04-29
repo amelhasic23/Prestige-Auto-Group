@@ -1,0 +1,167 @@
+{
+  "meta": {
+    "lang": "bs",
+    "name": "Bosanski",
+    "rtl": false,
+    "title": "RentCar - Premium rent-a-car usluga u Sarajevu i širom BiH",
+    "description": "Doživite vrhunski standard iznajmljivanja vozila uz profesionalnu uslugu i maksimalnu fleksibilnost. RentCar - vaš pouzdani partner za putovanja."
+  },
+  "nav": {
+    "home": "Početna",
+    "explore_cars": "Istraži vozila",
+    "about": "O nama",
+    "faq": "FAQ",
+    "testimonials": "Svjedočanstva",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Pouzdan rent-a-car u Sarajevu",
+    "description": "Povoljna, čista i redovno održavana vozila – brza i jednostavna rezervacija",
+    "cta_button": "Rezerviši odmah",
+    "form": {
+      "car_type": "Tip vozila",
+      "car_type_placeholder": "Koje vozilo tražite?",
+      "location": "Lokacija preuzimanja",
+      "location_placeholder": "Aerodrom, adresa ili grad",
+      "duration": "Trajanje najma",
+      "duration_placeholder": "Broj dana",
+      "search_button": "Pretražuj vozila"
+    }
+  },
+  "cars": {
+    "section_title": "Izdvojena vozila",
+    "view_more": "Prikaži više",
+    "people": "Osoba",
+    "gasoline": "Benzin",
+    "automatic": "Automatik",
+    "manual": "Manuelni",
+    "per_month": "/mjesec",
+    "rent_now": "Iznajmi sada",
+    "add_to_favorites": "Dodaj u omiljene"
+  },
+  "about": {
+    "title": "O nama",
+    "intro": "Nudimo pouzdana i dobro održavana vozila za sve vaše potrebe putovanja u Bosni i Hercegovini. Naš cilj je pružiti jednostavno, sigurno i profesionalno iskustvo najma vozila.",
+    "why_us_title": "Zašto odabrati nas",
+    "why_us_item1": "Čista i redovno servisirana vozila",
+    "why_us_item2": "Brz i jednostavan proces rezervacije",
+    "why_us_item3": "Bez skrivenih troškova",
+    "why_us_item4": "Ljubazna i profesionalna usluga",
+    "why_us_item5": "Mogućnost preuzimanja i dostave vozila",
+    "how_it_works_title": "Kako funkcioniše",
+    "card1": {
+      "title": "Izaberite vozilo",
+      "text": "Pregledajte našu ponudu i odaberite vozilo koje odgovara vašim potrebama."
+    },
+    "card2": {
+      "title": "Kontaktirajte nas ili pošaljite upit",
+      "text": "Pišite nam putem forme, WhatsApp-a ili pozovite – odgovaramo brzo."
+    },
+    "card3": {
+      "title": "Potvrdite rezervaciju",
+      "text": "Dogovorimo datum, lokaciju i uvjete najma – brzo i transparentno."
+    },
+    "card4": {
+      "title": "Preuzimanje ili dostava vozila",
+      "text": "Preuzimanje na dogovorenoj lokaciji ili dostava na vašu adresu u BiH."
+    }
+  },
+  "faq": {
+    "title": "FAQ - Često postavljana pitanja",
+    "question1": "Da li su vozila osigurana?",
+    "answer1": "Da, sva vozila imaju potpuno kasko osiguranje za maksimalnu sigurnost.",
+    "question2": "Da li mogu voziti vozilo van Bosne i Hercegovine?",
+    "answer2": "Da, omogućavamo vožnju u inostranstvu (npr. Hrvatska i druge zemlje regiona), uz prethodni dogovor.",
+    "question3": "Kako mogu rezervisati vozilo?",
+    "answer3": "Rezervaciju možete izvršiti putem web stranice ili direktnim kontaktom.",
+    "question4": "Da li nudite dostavu vozila?",
+    "answer4": "Da, vozilo dostavljamo na aerodrome i bilo koju adresu u BiH."
+  },
+  "testimonials": {
+    "title": "Reference / Svjedočanstva",
+    "testimonial1": {
+      "text": "Vrhunska usluga i profesionalan pristup. Sve preporuke.",
+      "author": "Zadovoljan kupac"
+    },
+    "testimonial2": {
+      "text": "Jednostavno, brzo i pouzdano – upravo ono što treba kada putujete.",
+      "author": "Zadovoljan kupac"
+    },
+    "testimonial3": {
+      "text": "Odlična vozila i fleksibilni uslovi. Sigurno ćemo ponovo koristiti usluge.",
+      "author": "Zadovoljan kupac"
+    }
+  },
+  "contact": {
+    "title": "Kontaktirajte nas",
+    "intro": "Imate pitanje ili želite rezervisati vozilo? Pišite nam i odgovoriti ćemo u najkraćem roku.",
+    "form": {
+      "name_label": "Ime i prezime *",
+      "name_placeholder": "Vaše ime i prezime",
+      "email_label": "Email adresa *",
+      "email_placeholder": "vas@email.com",
+      "phone_label": "Broj telefona",
+      "phone_placeholder": "+387 ...",
+      "message_label": "Poruka *",
+      "message_placeholder": "Napišite vašu poruku ili upit...",
+      "submit_button": "Pošalji poruku"
+    },
+    "info": {
+      "viber": "Viber",
+      "call_label": "Poziv / WhatsApp",
+      "email_label": "Email",
+      "location_label": "Lokacija",
+      "location_text": "Sarajevo, Bosna i Hercegovina",
+      "reserve_btn": "Rezerviši vozilo"
+    }
+  },
+  "footer": {
+    "brand_description": "Sva naša vozila su potpuno kasko osigurana, redovno održavana i spremna za sigurno i udobno putovanje.",
+    "company_section": "Kompanija",
+    "navigate_section": "Navigacija",
+    "copyright": "© 2023 Prestige Auto Group. Sva prava zadržana.",
+    "links": {
+      "our_fleet": "Naša flota"
+    }
+  },
+  "auth": {
+    "signin": "Prijava",
+    "signup": "Registracija",
+    "welcome_back": "Dobrodošli nazad",
+    "signin_subtitle": "Prijavite se na vaš račun",
+    "create_account": "Kreirajte račun",
+    "signup_subtitle": "Pridružite nam se danas",
+    "email": "Email",
+    "email_placeholder": "vas@email.com",
+    "password": "Šifra",
+    "password_placeholder": "••••••••",
+    "full_name": "Ime i prezime",
+    "full_name_placeholder": "Marko Marković",
+    "confirm_password": "Potvrdite šifru",
+    "confirm_password_placeholder": "••••••••",
+    "signin_button": "Prijavite se",
+    "create_account_button": "Kreirajte račun",
+    "forgot_password": "Zaboravili ste šifru?",
+    "have_account": "Već imate račun?",
+    "no_account": "Nemate račun?",
+    "welcome_user": "Dobrodošli, %name%!",
+    "logout": "Odjavi se",
+    "my_favorites": "Moji favoriti",
+    "my_profile": "Moj profil",
+    "login_required": "Molimo prijavite se da bi nastavili",
+    "registration_success": "Uspješno ste se registrovali i prijavili!",
+    "login_success": "Dobrodošli nazad!",
+    "logout_success": "Uspješno ste se odjavili",
+    "error_invalid_credentials": "Neispravni podaci za prijavu",
+    "error_email_exists": "Email adresa je već registrovana",
+    "error_invalid_email": "Neispravna email adresa",
+    "error_password_mismatch": "Šifre se ne poklapaju",
+    "error_password_length": "Šifra mora imati najmanje 6 karaktera",
+    "error_required_fields": "Molimo unesite sve potrebne podatke",
+    "error_network": "Greška prilikom povezivanja. Pokušajte ponovo",
+    "favorite_added": "Dodano u favorite",
+    "favorite_removed": "Uklonjeno iz favorita",
+    "rental_request": "Vaš zahtjev za %car% %year% je zabilježen!",
+    "rent_login_required": "Molimo prijavite se da bi mogli iznajmiti vozilo"
+  }
+}

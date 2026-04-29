@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "lang": "sv",
+    "name": "Svenska",
+    "rtl": false,
+    "title": "RentCar - Premium biluthyrning i Sarajevo och Bosnien",
+    "description": "Upplev premium standard för fordonshyra med professionell service och maximal flexibilitet. RentCar - din pålitliga resepartner."
+  },
+  "nav": {
+    "home": "Hem",
+    "explore_cars": "Utforska Bilar",
+    "about": "Om Oss",
+    "faq": "FAQ",
+    "testimonials": "Recensioner",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Pålitlig Biluthyrning i Sarajevo",
+    "description": "Prisvärda, rena och regelbundet underhållna fordon – snabb och enkel bokning",
+    "cta_button": "Boka Nu",
+    "form": {
+      "car_type": "Fordonstyp",
+      "car_type_placeholder": "Vilket fordon letar du efter?",
+      "location": "Upphämtningsplats",
+      "location_placeholder": "Flygplats, adress eller stad",
+      "duration": "Hyrestid",
+      "duration_placeholder": "Antal dagar",
+      "search_button": "Sök Fordon"
+    }
+  },
+  "cars": {
+    "section_title": "Utvalda Bilar",
+    "view_more": "Visa Mer",
+    "people": "Personer",
+    "gasoline": "Bensin",
+    "automatic": "Automatisk",
+    "manual": "Manuell",
+    "per_month": "/månad",
+    "rent_now": "Hyr Nu",
+    "add_to_favorites": "Lägg till Favoriter"
+  },
+  "about": {
+    "title": "Om Oss",
+    "intro": "Vi erbjuder pålitliga och välskötta fordon för alla dina resebehov i Bosnien och Hercegovina. Vårt mål är att ge en enkel, säker och professionell fordonsuthyrningsupplevelse.",
+    "why_us_title": "Varför Välja Oss",
+    "why_us_item1": "Rena och regelbundet servicade fordon",
+    "why_us_item2": "Snabb och enkel bokningsprocess",
+    "why_us_item3": "Inga dolda kostnader",
+    "why_us_item4": "Vänlig och professionell service",
+    "why_us_item5": "Fordonshämtning och leverans tillgänglig",
+    "how_it_works_title": "Hur Det Fungerar",
+    "card1": {
+      "title": "Välj ett Fordon",
+      "text": "Bläddra bland vårt utbud och välj det fordon som passar dina behov."
+    },
+    "card2": {
+      "title": "Kontakta Oss eller Skicka en Förfrågan",
+      "text": "Skriv till oss via formuläret, WhatsApp eller ring – vi svarar snabbt."
+    },
+    "card3": {
+      "title": "Bekräfta din Bokning",
+      "text": "Vi avtalar datum, plats och hyresvillkor – snabbt och transparent."
+    },
+    "card4": {
+      "title": "Fordonshämtning eller Leverans",
+      "text": "Hämtning på den överenskomna platsen eller leverans till din adress i BiH."
+    }
+  },
+  "faq": {
+    "title": "FAQ - Vanliga Frågor",
+    "question1": "Är fordonen försäkrade?",
+    "answer1": "Ja, alla fordon har heltäckande försäkring för maximal säkerhet.",
+    "question2": "Kan jag köra fordonet utanför Bosnien och Hercegovina?",
+    "answer2": "Ja, vi tillåter körning utomlands (t.ex. Kroatien och andra regionala länder), med förhandsarrangemang.",
+    "question3": "Hur kan jag reservera ett fordon?",
+    "answer3": "Du kan göra en reservation via webbplatsen eller genom direkt kontakt.",
+    "question4": "Erbjuder ni fordonsleverans?",
+    "answer4": "Ja, vi levererar fordonet till flygplatser och vilken adress som helst i BiH."
+  },
+  "testimonials": {
+    "title": "Referenser / Vittnesmål",
+    "testimonial1": {
+      "text": "Utmärkt service och professionellt förhållningssätt. Mycket rekommenderat.",
+      "author": "Nöjd Kund"
+    },
+    "testimonial2": {
+      "text": "Enkelt, snabbt och pålitligt – precis vad du behöver när du reser.",
+      "author": "Nöjd Kund"
+    },
+    "testimonial3": {
+      "text": "Fantastiska fordon och flexibla villkor. Vi kommer definitivt att använda tjänsterna igen.",
+      "author": "Nöjd Kund"
+    }
+  },
+  "contact": {
+    "title": "Kontakta Oss",
+    "intro": "Har du en fråga eller vill reservera ett fordon? Skriv till oss så svarar vi så snart som möjligt.",
+    "form": {
+      "name_label": "Fullständigt Namn *",
+      "name_placeholder": "Ditt fullständiga namn",
+      "email_label": "E-postadress *",
+      "email_placeholder": "din@email.com",
+      "phone_label": "Telefonnummer",
+      "phone_placeholder": "+46 ...",
+      "message_label": "Meddelande *",
+      "message_placeholder": "Skriv ditt meddelande eller förfrågan...",
+      "submit_button": "Skicka Meddelande"
+    },
+    "info": {
+      "viber": "Viber",
+      "call_label": "Ring / WhatsApp",
+      "email_label": "E-post",
+      "location_label": "Plats",
+      "location_text": "Sarajevo, Bosnien och Hercegovina",
+      "reserve_btn": "Reservera ett Fordon"
+    }
+  },
+  "footer": {
+    "brand_description": "Alla våra fordon är helförsäkrade, regelbundet underhållna och redo för säker och bekväm resa.",
+    "company_section": "Företag",
+    "navigate_section": "Navigera",
+    "copyright": "© 2023 Prestige Auto Group. Alla rättigheter förbehållna.",
+    "links": {
+      "our_fleet": "Vår Flotta"
+    }
+  },
+  "auth": {
+    "signin": "Logga In",
+    "signup": "Registrera",
+    "welcome_back": "Välkommen Tillbaka",
+    "signin_subtitle": "Logga in på ditt konto",
+    "create_account": "Skapa Konto",
+    "signup_subtitle": "Gå med oss idag",
+    "email": "E-post",
+    "email_placeholder": "din@email.com",
+    "password": "Lösenord",
+    "password_placeholder": "••••••••",
+    "full_name": "Fullständigt Namn",
+    "full_name_placeholder": "John Doe",
+    "confirm_password": "Bekräfta Lösenord",
+    "confirm_password_placeholder": "••••••••",
+    "signin_button": "Logga In",
+    "create_account_button": "Skapa Konto",
+    "forgot_password": "Glömt lösenord?",
+    "have_account": "Har du redan ett konto?",
+    "no_account": "Har du inget konto?"
+  }
+}

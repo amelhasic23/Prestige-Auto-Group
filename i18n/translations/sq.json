@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "lang": "sq",
+    "name": "Shqip",
+    "rtl": false,
+    "title": "RentCar - Shërbim premium qiraje automjetesh në Sarajevë dhe në të gjithë Bosnjën",
+    "description": "Përjetoni standardin më të lartë të qirasë së automjeteve me shërbim profesional dhe fleksibilitet maksimal. RentCar - partneri juaj i besueshëm për udhëtim."
+  },
+  "nav": {
+    "home": "Kryefaqe",
+    "explore_cars": "Eksploro Automjetet",
+    "about": "Rreth Nesh",
+    "faq": "Pyetje të Shpeshta",
+    "testimonials": "Dëshmi",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Qiraje e Besueshme Automjetesh në Sarajevë",
+    "description": "Automjete me çmim të arsyeshëm, të pastra dhe të mirëmbajtura rregullisht – rezervim i shpejtë dhe i thjeshtë",
+    "cta_button": "Rezervo Tani",
+    "form": {
+      "car_type": "Lloji i Automjetit",
+      "car_type_placeholder": "Çfarë automjeti po kërkoni?",
+      "location": "Vendndodhja e Marrjes",
+      "location_placeholder": "Aeroport, adresë ose qytet",
+      "duration": "Kohëzgjatja e Qirasë",
+      "duration_placeholder": "Numri i ditëve",
+      "search_button": "Kërko Automjete"
+    }
+  },
+  "cars": {
+    "section_title": "Automjete të Zgjedhura",
+    "view_more": "Shiko Më Shumë",
+    "people": "Persona",
+    "gasoline": "Benzinë",
+    "automatic": "Automatike",
+    "manual": "Manuale",
+    "per_month": "/muaj",
+    "rent_now": "Qiraje Tani",
+    "add_to_favorites": "Shto në Të Preferuarat"
+  },
+  "about": {
+    "title": "Rreth Nesh",
+    "intro": "Ne ofrojmë automjete të besueshme dhe të mirëmbajtura për të gjitha nevojat tuaja të udhëtimit në Bosnje dhe Hercegovinë. Qëllimi ynë është të ofrojmë një përvojë të thjeshtë, të sigurt dhe profesionale të marrjes me qira.",
+    "why_us_title": "Pse të Na Zgjidhni",
+    "why_us_item1": "Automjete të pastra dhe të servisuara rregullisht",
+    "why_us_item2": "Proces i shpejtë dhe i thjeshtë rezervimi",
+    "why_us_item3": "Pa kosto të fshehura",
+    "why_us_item4": "Shërbim miqësor dhe profesional",
+    "why_us_item5": "Mundësia e marrjes dhe dorëzimit të automjetit",
+    "how_it_works_title": "Si Funksionon",
+    "card1": {
+      "title": "Zgjidhni Automjetin",
+      "text": "Shfletoni ofertën tonë dhe zgjidhni automjetin që i përshtatet nevojave tuaja."
+    },
+    "card2": {
+      "title": "Na Kontaktoni ose Dërgoni një Pyetje",
+      "text": "Na shkruani përmes formularit, WhatsApp ose telefononi – përgjigjemi shpejt."
+    },
+    "card3": {
+      "title": "Konfirmoni Rezervimin",
+      "text": "Bien dakord mbi datën, vendndodhjen dhe kushtet e qirasë – shpejt dhe transparentisht."
+    },
+    "card4": {
+      "title": "Marrja ose Dorëzimi i Automjetit",
+      "text": "Marrja në vendndodhjen e rënë dakord ose dorëzimi në adresën tuaj në BiH."
+    }
+  },
+  "faq": {
+    "title": "Pyetje të Shpeshta",
+    "question1": "A janë automjetet të siguruara?",
+    "answer1": "Po, të gjitha automjetet kanë sigurim të plotë për siguri maksimale.",
+    "question2": "A mund ta drejtoj automjetin jashtë Bosnje dhe Hercegovinës?",
+    "answer2": "Po, ne lejojmë drejtimin jashtë vendit (p.sh. Kroacia dhe vende të tjera rajonale), me marrëveshje paraprake.",
+    "question3": "Si mund të rezervoj një automjet?",
+    "answer3": "Mund të bëni një rezervim përmes faqes së internetit ose me kontakt të drejtpërdrejtë.",
+    "question4": "A ofroni dorëzim automjeti?",
+    "answer4": "Po, ne dorëzojmë automjetin në aeroporta dhe në çdo adresë në BiH."
+  },
+  "testimonials": {
+    "title": "Referenca / Dëshmi",
+    "testimonial1": {
+      "text": "Shërbim i shkëlqyer dhe qasje profesionale. Shumë i rekomanduar.",
+      "author": "Klient i Kënaqur"
+    },
+    "testimonial2": {
+      "text": "Të thjeshtë, të shpejtë dhe të besueshëm – pikërisht ajo që ju nevojitet kur udhëtoni.",
+      "author": "Klient i Kënaqur"
+    },
+    "testimonial3": {
+      "text": "Automjete të shkëlqyera dhe kushte fleksibël. Definitivisht do t'i përdorim sërish shërbimet.",
+      "author": "Klient i Kënaqur"
+    }
+  },
+  "contact": {
+    "title": "Na Kontaktoni",
+    "intro": "Keni një pyetje ose doni të rezervoni një automjet? Na shkruani dhe do t'ju përgjigjemi sa më shpejt të jetë e mundur.",
+    "form": {
+      "name_label": "Emri i Plotë *",
+      "name_placeholder": "Emri juaj i plotë",
+      "email_label": "Adresa E-mail *",
+      "email_placeholder": "juaji@email.com",
+      "phone_label": "Numri i Telefonit",
+      "phone_placeholder": "+355 ...",
+      "message_label": "Mesazhi *",
+      "message_placeholder": "Shkruani mesazhin ose pyetjen tuaj...",
+      "submit_button": "Dërgo Mesazhin"
+    },
+    "info": {
+      "viber": "Viber",
+      "call_label": "Telefonatë / WhatsApp",
+      "email_label": "Email",
+      "location_label": "Vendndodhja",
+      "location_text": "Sarajevë, Bosnjë dhe Hercegovinë",
+      "reserve_btn": "Rezervo Automjetin"
+    }
+  },
+  "footer": {
+    "brand_description": "Të gjitha automjetet tona janë plotësisht të siguruara, mirëmbahen rregullisht dhe janë gati për udhëtim të sigurt dhe komfort.",
+    "company_section": "Kompania",
+    "navigate_section": "Navigo",
+    "copyright": "© 2023 Prestige Auto Group. Të gjitha të drejtat e rezervuara.",
+    "links": {
+      "our_fleet": "Flota Jonë"
+    }
+  },
+  "auth": {
+    "signin": "Identifikohu",
+    "signup": "Regjistrohu",
+    "welcome_back": "Mirë se Erdhe Përsëri",
+    "signin_subtitle": "Identifikohu në llogarinë tënde",
+    "create_account": "Krijo Llogari",
+    "signup_subtitle": "Bashkohu me ne sot",
+    "email": "Email",
+    "email_placeholder": "juaji@email.com",
+    "password": "Fjalëkalimi",
+    "password_placeholder": "••••••••",
+    "full_name": "Emri i Plotë",
+    "full_name_placeholder": "Ilir Hoxha",
+    "confirm_password": "Konfirmo Fjalëkalimin",
+    "confirm_password_placeholder": "••••••••",
+    "signin_button": "Identifikohu",
+    "create_account_button": "Krijo Llogari",
+    "forgot_password": "Harrove fjalëkalimin?",
+    "have_account": "Ke tashmë një llogari?",
+    "no_account": "Nuk ke një llogari?"
+  }
+}

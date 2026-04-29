@@ -1,0 +1,428 @@
+/**
+ * RTL (Right-to-Left) Support for Arabic Language
+ * This stylesheet is dynamically loaded when Arabic is selected
+ */
+
+/* Core RTL direction */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Header and Navigation */
+[dir="rtl"] .navbar-list {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .header-actions {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .header-contact {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .contact-link {
+  margin-left: 1rem;
+  margin-right: 0;
+}
+
+[dir="rtl"] .lang-select {
+  margin-left: 1rem;
+  margin-right: 0;
+}
+
+[dir="rtl"] .explore-btn {
+  margin-left: 1rem;
+  margin-right: 0;
+}
+
+[dir="rtl"] .user-btn {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+/* Hero Section */
+[dir="rtl"] .hero-content {
+  text-align: right;
+}
+
+[dir="rtl"] .hero-form {
+  text-align: right;
+}
+
+[dir="rtl"] .input-wrapper {
+  text-align: right;
+}
+
+[dir="rtl"] .input-label {
+  text-align: right;
+}
+
+[dir="rtl"] .input-field {
+  text-align: right;
+  padding-left: 1.5rem;
+  padding-right: 1rem;
+}
+
+[dir="rtl"] .hero-form-btn {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Featured Cars Section */
+[dir="rtl"] .title-wrapper {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .featured-car-link {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .featured-car-link span {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+[dir="rtl"] .card-title-wrapper,
+[dir="rtl"] .card-content {
+  text-align: right;
+}
+
+[dir="rtl"] .card-list {
+  text-align: right;
+}
+
+[dir="rtl"] .card-list-item {
+  justify-content: flex-end;
+}
+
+[dir="rtl"] .card-item-text {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+[dir="rtl"] .card-price-wrapper {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .card-price {
+  text-align: right;
+}
+
+[dir="rtl"] .fav-btn {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+[dir="rtl"] .rent-btn {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+/* About Section */
+[dir="rtl"] .get-start-card {
+  text-align: right;
+}
+
+[dir="rtl"] .card-title {
+  text-align: right;
+}
+
+[dir="rtl"] .card-text {
+  text-align: right;
+}
+
+[dir="rtl"] .card-link {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* FAQ Section */
+[dir="rtl"] .faq-question {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .faq-question h3 {
+  text-align: right;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+[dir="rtl"] .faq-icon {
+  transform: rotate(180deg);
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+[dir="rtl"] .faq-answer {
+  text-align: right;
+}
+
+[dir="rtl"] .faq-answer p {
+  text-align: right;
+}
+
+/* Testimonials Section */
+[dir="rtl"] .testimonial-content {
+  text-align: right;
+}
+
+[dir="rtl"] .testimonial-text {
+  text-align: right;
+}
+
+[dir="rtl"] .customer-info {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .customer-name {
+  text-align: right;
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+/* Contact Form */
+[dir="rtl"] .contact-form {
+  text-align: right;
+}
+
+[dir="rtl"] .form-row {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .form-group {
+  text-align: right;
+}
+
+[dir="rtl"] .form-label {
+  text-align: right;
+}
+
+[dir="rtl"] .form-input,
+[dir="rtl"] .form-textarea {
+  text-align: right;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+[dir="rtl"] .form-btn {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+[dir="rtl"] .contact-info {
+  text-align: right;
+}
+
+[dir="rtl"] .contact-info-item {
+  flex-direction: row-reverse;
+}
+
+/* Footer */
+[dir="rtl"] .footer-brand {
+  text-align: right;
+}
+
+[dir="rtl"] .footer-text {
+  text-align: right;
+}
+
+[dir="rtl"] .footer-nav {
+  text-align: right;
+}
+
+[dir="rtl"] .footer-list {
+  text-align: right;
+}
+
+[dir="rtl"] .footer-list-title {
+  text-align: right;
+}
+
+[dir="rtl"] .footer-link {
+  text-align: right;
+}
+
+[dir="rtl"] .footer-bottom {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .social-list {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .copyright {
+  text-align: right;
+}
+
+/* Authentication Modal */
+[dir="rtl"] .auth-modal {
+  text-align: right;
+}
+
+[dir="rtl"] .auth-tabs {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .auth-form {
+  text-align: right;
+}
+
+[dir="rtl"] .auth-title {
+  text-align: right;
+}
+
+[dir="rtl"] .auth-subtitle {
+  text-align: right;
+}
+
+[dir="rtl"] .auth-field {
+  text-align: right;
+}
+
+[dir="rtl"] .auth-label {
+  text-align: right;
+}
+
+[dir="rtl"] .auth-input-wrap {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .auth-input {
+  text-align: right;
+  padding-left: 2.5rem;
+  padding-right: 1rem;
+}
+
+[dir="rtl"] .auth-input-wrap ion-icon {
+  left: auto;
+  right: 1rem;
+}
+
+[dir="rtl"] .auth-forgot {
+  text-align: right;
+}
+
+[dir="rtl"] .auth-submit-btn {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+[dir="rtl"] .auth-switch {
+  text-align: right;
+}
+
+/* Icon Direction Adjustments */
+[dir="rtl"] ion-icon[name="arrow-forward-outline"] {
+  transform: rotate(180deg);
+}
+
+[dir="rtl"] ion-icon[name="chevron-down-outline"] {
+  transform: rotate(180deg);
+}
+
+/* Mobile Navigation (RTL) */
+[dir="rtl"] .nav-toggle-btn {
+  left: 2rem;
+  right: auto;
+}
+
+[dir="rtl"] .navbar {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .overlay {
+  left: auto;
+  right: 0;
+}
+
+/* Mobile responsive adjustments for RTL */
+@media (max-width: 991px) {
+  [dir="rtl"] .header-actions {
+    flex-direction: row-reverse;
+  }
+
+  [dir="rtl"] .navbar-list {
+    text-align: right;
+  }
+
+  [dir="rtl"] .navbar-link {
+    text-align: right;
+  }
+}
+
+@media (max-width: 768px) {
+  [dir="rtl"] .hero-content {
+    text-align: right;
+  }
+
+  [dir="rtl"] .section-title {
+    text-align: right;
+  }
+
+  [dir="rtl"] .hero-form {
+    text-align: right;
+  }
+
+  [dir="rtl"] .form-row {
+    flex-direction: column;
+  }
+
+  [dir="rtl"] .card-price-wrapper {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  [dir="rtl"] .header-contact {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  [dir="rtl"] .featured-car-link {
+    flex-direction: column;
+    text-align: right;
+  }
+
+  [dir="rtl"] .footer-bottom {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+/* Animations for RTL */
+[dir="rtl"] .navbar.active {
+  transform: translateX(0);
+}
+
+[dir="rtl"] .navbar {
+  transform: translateX(100%);
+}
+
+/* Text selection for RTL */
+[dir="rtl"] ::selection {
+  background-color: var(--selection-bg, #e3f2fd);
+  color: var(--selection-text, #1565c0);
+}
+
+/* Scrollbar for RTL content */
+[dir="rtl"] ::-webkit-scrollbar {
+  width: 8px;
+}
+
+[dir="rtl"] ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+[dir="rtl"] ::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+[dir="rtl"] ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
