@@ -19,10 +19,26 @@ for (let i = 0; i < navbarLinks.length; i++) {
 }
 
 const header = document.querySelector("[data-header]");
-window.addEventListener("scroll", function () {
-    if (!header) return;
-    window.scrollY >= 10 ? header.classList.add("active") : header.classList.remove("active");
-});
+let backToTopBtn;
+let _updateActiveNavLink = function() {};
+
+let _scrollTicking = false;
+function _onScroll() {
+    const scrollY = window.scrollY;
+    if (header) scrollY >= 10 ? header.classList.add('active') : header.classList.remove('active');
+    if (backToTopBtn) {
+        const show = scrollY > 300;
+        backToTopBtn.style.opacity = show ? '1' : '0';
+        backToTopBtn.style.pointerEvents = show ? 'all' : 'none';
+    }
+    _updateActiveNavLink();
+}
+window.addEventListener('scroll', function() {
+    if (!_scrollTicking) {
+        requestAnimationFrame(function() { _onScroll(); _scrollTicking = false; });
+        _scrollTicking = true;
+    }
+}, { passive: true });
 
 // ========================================
 // i18n Integration Functions
@@ -614,8 +630,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize back to top button
     initializeBackToTop();
 
-    // Initialize testimonials slider
-    initTestimonialsSlider();
+    // Initialize testimonials Swiper slider
+    initSwiper();
 
     // Initialize scroll reveal animations
     initScrollReveal();
@@ -625,15 +641,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize authentication system
     initializeAuthentication();
+
+    // Contact form — mailto handler (avoids mixed-content warning)
+    document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name    = this.querySelector('[name="ime"]')?.value || '';
+        const email   = this.querySelector('[name="email"]')?.value || '';
+        const phone   = this.querySelector('[name="telefon"]')?.value || '';
+        const message = this.querySelector('[name="poruka"]')?.value || '';
+        const body    = encodeURIComponent(`${message}\n\nIme: ${name}\nEmail: ${email}\nTelefon: ${phone}`);
+        window.location.href = `mailto:info@prestigeautogroup.ba?subject=${encodeURIComponent('Upit - ' + name)}&body=${body}`;
+    });
 });
 
 /**
  * Initialize authentication system
  */
 function initializeAuthentication() {
-    // Wait for AuthManager class to be available
     if (typeof AuthManager === 'undefined') {
-        console.error('AuthManager class not loaded. Make sure auth.js is included.');
         return;
     }
 
@@ -757,20 +782,9 @@ function hideInputError(input) {
  * Initialize back to top button functionality
  */
 function initializeBackToTop() {
-    const backToTopBtn = document.getElementById('back-to-top');
+    backToTopBtn = document.getElementById('back-to-top');
 
     if (backToTopBtn) {
-        // Handle scroll visibility
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 300) {
-                backToTopBtn.style.opacity = '1';
-                backToTopBtn.style.pointerEvents = 'all';
-            } else {
-                backToTopBtn.style.opacity = '0';
-                backToTopBtn.style.pointerEvents = 'none';
-            }
-        });
-
         // Handle click
         backToTopBtn.addEventListener('click', function() {
             window.scrollTo({
@@ -783,119 +797,34 @@ function initializeBackToTop() {
 
 
 // ========================================
-// Testimonials Slider
+// Swiper Testimonials Slider
 // ========================================
 
-function initTestimonialsSlider() {
-    const track     = document.getElementById('testimonialsTrack');
-    const prevBtn   = document.getElementById('testimonialsPrev');
-    const nextBtn   = document.getElementById('testimonialsNext');
-    const dots      = document.querySelectorAll('.slider-dot');
-
-    if (!track) return;
-
-    const slides    = track.querySelectorAll('.testimonials-item');
-    const total     = slides.length;
-    let currentIdx  = 0;
-    let autoTimer   = null;
-
-    function isSliderActive() {
-        return window.innerWidth < 768;
-    }
-
-    function goTo(idx) {
-        currentIdx = ((idx % total) + total) % total;
-
-        if (isSliderActive()) {
-            // Each slide is 100% of wrapper; track is (total * 100%) of wrapper.
-            // translateX(-n * 100/total %) moves by exactly n slide widths.
-            track.style.transform = `translateX(-${(currentIdx * 100 / total)}%)`;
-        } else {
-            track.style.transform = '';
+function initSwiper() {
+    new Swiper('.testimonials-swiper', {
+        loop: true,
+        speed: 600,
+        grabCursor: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+        },
+        pagination: {
+            el: '.testimonials-pagination',
+            clickable: true,
+            dynamicBullets: true
+        },
+        navigation: {
+            prevEl: '.testimonials-prev',
+            nextEl: '.testimonials-next'
+        },
+        breakpoints: {
+            0:    { slidesPerView: 1, spaceBetween: 16 },
+            768:  { slidesPerView: 1, spaceBetween: 24 },
+            1200: { slidesPerView: 1, spaceBetween: 28 }
         }
-
-        dots.forEach((d, i) => {
-            d.classList.toggle('active', i === currentIdx);
-            d.setAttribute('aria-selected', i === currentIdx ? 'true' : 'false');
-        });
-    }
-
-    function startAutoplay() {
-        stopAutoplay();
-        if (isSliderActive()) {
-            autoTimer = setInterval(() => goTo(currentIdx + 1), 5000);
-        }
-    }
-
-    function stopAutoplay() {
-        if (autoTimer) clearInterval(autoTimer);
-        autoTimer = null;
-    }
-
-    function restartAutoplay() {
-        stopAutoplay();
-        startAutoplay();
-    }
-
-    if (prevBtn) prevBtn.addEventListener('click', () => { goTo(currentIdx - 1); restartAutoplay(); });
-    if (nextBtn) nextBtn.addEventListener('click', () => { goTo(currentIdx + 1); restartAutoplay(); });
-
-    dots.forEach((dot, i) => {
-        dot.addEventListener('click', () => { goTo(i); restartAutoplay(); });
     });
-
-    // Touch / swipe support
-    let touchStartX  = 0;
-    let touchStartY  = 0;
-    let isDragging   = false;
-
-    track.addEventListener('touchstart', e => {
-        touchStartX = e.touches[0].clientX;
-        touchStartY = e.touches[0].clientY;
-        isDragging  = false;
-    }, { passive: true });
-
-    track.addEventListener('touchmove', e => {
-        isDragging = true;
-    }, { passive: true });
-
-    track.addEventListener('touchend', e => {
-        if (!isDragging) return;
-        const deltaX = touchStartX - e.changedTouches[0].clientX;
-        const deltaY = Math.abs(touchStartY - e.changedTouches[0].clientY);
-        if (Math.abs(deltaX) > 50 && Math.abs(deltaX) > deltaY) {
-            goTo(deltaX > 0 ? currentIdx + 1 : currentIdx - 1);
-            restartAutoplay();
-        }
-    }, { passive: true });
-
-    // Reset or reinit on resize
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => {
-            if (isSliderActive()) {
-                goTo(currentIdx);
-                startAutoplay();
-            } else {
-                track.style.transform = '';
-                stopAutoplay();
-                dots.forEach(d => d.classList.remove('active'));
-                if (dots[0]) dots[0].classList.add('active');
-                currentIdx = 0;
-            }
-        }, 150);
-    });
-
-    // Pause autoplay when user hovers
-    track.addEventListener('mouseenter', stopAutoplay);
-    track.addEventListener('mouseleave', startAutoplay);
-
-    // Init
-    if (isSliderActive()) {
-        goTo(0);
-        startAutoplay();
-    }
 }
 
 
@@ -928,9 +857,13 @@ function initActiveNavLink() {
     const sections  = document.querySelectorAll('section[id]');
     if (!navLinks.length || !sections.length) return;
 
-    function updateActive() {
+    const headerEl  = document.querySelector('[data-header]');
+    let cachedHeaderH = headerEl?.offsetHeight ?? 80;
+    window.addEventListener('resize', () => { cachedHeaderH = headerEl?.offsetHeight ?? 80; }, { passive: true });
+
+    _updateActiveNavLink = function() {
         const scrollY   = window.scrollY;
-        const headerH   = document.querySelector('[data-header]')?.offsetHeight ?? 80;
+        const headerH   = cachedHeaderH;
         let   current   = '';
 
         sections.forEach(sec => {
@@ -943,8 +876,7 @@ function initActiveNavLink() {
             const href = link.getAttribute('href')?.slice(1);
             link.classList.toggle('active-nav-link', href === current);
         });
-    }
+    };
 
-    window.addEventListener('scroll', updateActive, { passive: true });
-    updateActive();
+    _updateActiveNavLink();
 }

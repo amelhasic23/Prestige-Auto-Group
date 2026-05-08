@@ -7,27 +7,33 @@
     <meta name="keywords" content="rent a car, Sarajevo, iznajmljivanje vozila, dostava na aerodrome, kasko osiguranje">
     <meta name="author" content="Prestige Auto Group">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="/">
+    <link rel="canonical" href="https://prestigeautorent.netlify.app/">
     <link rel="stylesheet" href="index.css">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Prestige Auto Group Sarajevo">
+    <meta property="og:title" content="Prestige Auto Car Sarajevo">
     <meta property="og:description" content="Premium rent-a-car usluga u Sarajevu i širom Bosne i Hercegovine. Pouzdana i moderna vozila.">
     <meta property="og:image" content="./viber_image_2026-04-22_11-03-51-142.jpg">
-    <meta property="og:url" content="/">
+    <meta property="og:url" content="https://prestigeautorent.netlify.app/">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Prestige Auto Group Sarajevo">
+    <meta name="twitter:title" content="Prestige Auto Car Sarajevo">
     <meta name="twitter:description" content="Premium rent-a-car usluga u Sarajevu i širom Bosne i Hercegovine.">
     <meta name="twitter:image" content="./viber_image_2026-04-22_11-03-51-142.jpg">
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="shortcut icon" href="images/favicon.png">
-    <link rel="apple-touch-icon" href="images/favicon.png">
+    <!-- Favicon — use site logo -->
+    <link rel="icon" type="image/jpeg" href="viber_image_2026-04-22_11-03-51-142.jpg">
+    <link rel="shortcut icon" href="viber_image_2026-04-22_11-03-51-142.jpg">
+    <link rel="apple-touch-icon" href="viber_image_2026-04-22_11-03-51-142.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <title>Prestige Auto Group Sarajevo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Preload LCP hero image -->
+    <link rel="preload" as="image" href="hero-banner.jpg" fetchpriority="high">
+    <title>Prestige Auto Group</title>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJQHEY1FZF"></script>
     <script>
@@ -43,7 +49,7 @@
         <div class="container">
         <div class="overlay" data-overlay onclick="toggleMobileMenu()"></div>
         <a href="#" class="logo">
-            <img src="viber_image_2026-04-22_11-03-51-142.jpg" alt="Prestige Car Rental Logo">
+            <img src="viber_image_2026-04-22_11-03-51-142.jpg" alt="Prestige Car Rental Logo" width="120" height="60">
         </a>
 
         <nav class="navbar" data-navbar id="navbar">
@@ -145,8 +151,11 @@
                     <a href="#contact" class="btn hero-cta-btn" data-i18n="hero.cta_button">Rezerviši odmah</a>
                 </div>
 
-                <div class="hero-banner">
-                    <img src="hero-banner.jpg" alt="Rent-a-car Sarajevo" class="hero-banner-img">
+                <div class="scroll-indicator" aria-hidden="true" onclick="document.getElementById('featured-car').scrollIntoView({behavior:'smooth'})">
+                    <div class="mouse-scroll">
+                        <div class="mouse-scroll-wheel"></div>
+                    </div>
+                    <span class="scroll-indicator-text">Scroll</span>
                 </div>
             </section>
         </article>
@@ -532,10 +541,9 @@
             <div class="container">
                 <h2 class="h2 section-title" id="testimonials-label" data-i18n="testimonials.title">Reference / Svjedočanstva</h2>
 
-                <div class="testimonials-slider-outer">
-                    <div class="testimonials-track-wrapper">
-                        <ul class="testimonials-track" id="testimonialsTrack">
-                            <li class="testimonials-item reveal">
+                <div class="swiper testimonials-swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide testimonials-item" id="testimonial-panel-0" role="tabpanel" aria-labelledby="testimonial-tab-0" tabindex="0">
                                 <div class="testimonials-card">
                                     <div class="testimonial-content">
                                         <p class="testimonial-text" data-i18n="testimonials.testimonial1.text">"Vrhunska usluga i profesionalan pristup. Sve preporuke."</p>
@@ -549,7 +557,7 @@
                                 </div>
                             </li>
 
-                            <li class="testimonials-item reveal reveal-delay-1">
+                        <li class="swiper-slide testimonials-item" id="testimonial-panel-1" role="tabpanel" aria-labelledby="testimonial-tab-1" tabindex="0">
                                 <div class="testimonials-card">
                                     <div class="testimonial-content">
                                         <p class="testimonial-text" data-i18n="testimonials.testimonial2.text">"Jednostavno, brzo i pouzdano – upravo ono što treba kada putujete."</p>
@@ -563,7 +571,7 @@
                                 </div>
                             </li>
 
-                            <li class="testimonials-item reveal reveal-delay-2">
+                        <li class="swiper-slide testimonials-item" id="testimonial-panel-2" role="tabpanel" aria-labelledby="testimonial-tab-2" tabindex="0">
                                 <div class="testimonials-card">
                                     <div class="testimonial-content">
                                         <p class="testimonial-text" data-i18n="testimonials.testimonial3.text">"Odlična vozila i fleksibilni uslovi. Sigurno ćemo ponovo koristiti usluge."</p>
@@ -576,21 +584,11 @@
                                     </div>
                                 </div>
                             </li>
-                        </ul>
-                    </div>
+                    </ul>
 
-                    <button class="slider-btn slider-prev" id="testimonialsPrev" aria-label="Previous testimonial">
-                        <ion-icon name="chevron-back-outline"></ion-icon>
-                    </button>
-                    <button class="slider-btn slider-next" id="testimonialsNext" aria-label="Next testimonial">
-                        <ion-icon name="chevron-forward-outline"></ion-icon>
-                    </button>
-
-                    <div class="slider-dots" id="testimonialsDots" role="tablist">
-                        <button class="slider-dot active" data-idx="0" aria-label="Testimonial 1"></button>
-                        <button class="slider-dot" data-idx="1" aria-label="Testimonial 2"></button>
-                        <button class="slider-dot" data-idx="2" aria-label="Testimonial 3"></button>
-                    </div>
+                    <div class="swiper-pagination testimonials-pagination"></div>
+                    <div class="swiper-button-prev testimonials-prev"></div>
+                    <div class="swiper-button-next testimonials-next"></div>
                 </div>
             </div>
         </section>
@@ -602,7 +600,7 @@
                 <h2 class="h2 section-title" data-i18n="contact.title">Kontaktirajte nas</h2>
                 <p class="contact-intro" data-i18n="contact.intro">Imate pitanje ili želite rezervisati vozilo? Pišite nam i odgovoriti ćemo u najkraćem roku.</p>
 
-                <form class="contact-form" action="mailto:info@prestigeautogroup.ba" method="post" enctype="text/plain">
+                <form id="contactForm" class="contact-form" novalidate>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="contact-name" class="form-label" data-i18n="contact.form.name_label">Ime i prezime *</label>
@@ -668,7 +666,7 @@
                 <div class="footer-top">
                     <div class="footer-brand">
                         <a href="#" class="logo">
-                            <img src="viber_image_2026-04-22_11-03-51-142.jpg" alt="Prestige Auto Rental Logo">
+                            <img src="viber_image_2026-04-22_11-03-51-142.jpg" alt="Prestige Auto Rental Logo" width="37" height="55" loading="lazy">
                         </a>
                         <p class="footer-text" data-i18n="footer.brand_description">
                             Sva naša vozila su potpuno kasko osigurana, redovno održavana i spremna za sigurno i udobno putovanje.
@@ -730,8 +728,8 @@
     </main>
 
 
-    <script src="index.js"></script>
-    <script src="i18n/i18n.js"></script>
+    <script defer src="index.js"></script>
+    <script defer src="i18n/i18n.js"></script>
 
     <!-- Contact Button -->
     <div id="contact-float-btn" title="Contact Us">
@@ -771,22 +769,11 @@
                 options.classList.remove('active');
             }
         });
-
-        window.addEventListener('scroll', function() {
-            var btn = document.getElementById('back-to-top');
-            if (window.scrollY > 300) {
-                btn.style.opacity = '1';
-                btn.style.pointerEvents = 'all';
-            } else {
-                btn.style.opacity = '0';
-                btn.style.pointerEvents = 'none';
-            }
-        });
-        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" defer src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule defer src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>
