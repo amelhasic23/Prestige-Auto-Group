@@ -1,0 +1,12 @@
+{
+  "name": "prestige-auto-group",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cleancss -o index.css index.css && terser index.js -o index.js --compress --mangle && terser i18n/i18n.js -o i18n/i18n.js --compress --mangle"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "terser": "^5.31.0"
+  }
+}
