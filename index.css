@@ -1911,14 +1911,14 @@ button, a {
 
 /* ── Swiper pagination dots ── */
 .testimonials-swiper .swiper-pagination-bullet {
-    background: rgba(255, 255, 255, 0.35);
+    background: transparent !important;
     opacity: 1;
-    width: 12px;
-    height: 12px;
-    margin: 0 6px !important;
-    padding: 18px;
+    width: 44px !important;
+    height: 44px !important;
+    margin: 0 2px !important;
+    padding: 0;
     position: relative;
-    transition: width 0.3s ease, background 0.3s ease, border-radius 0.3s ease;
+    transition: none;
 }
 
 .testimonials-swiper .swiper-pagination-bullet::before {
@@ -1927,15 +1927,17 @@ button, a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     background: rgba(255, 255, 255, 0.35);
     border-radius: 50%;
+    transition: width 0.3s ease, background 0.3s ease, border-radius 0.3s ease;
 }
 
 .testimonials-swiper .swiper-pagination-bullet-active::before {
     background: var(--gold);
     width: 24px;
+    height: 10px;
     border-radius: 4px;
 }
 

@@ -38,16 +38,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
 
     <!-- Load full CSS asynchronously -->
-    <link rel="preload" href="index.css" as="style">
     <link rel="stylesheet" href="index.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="index.css"></noscript>
-    <!-- Preload LCP hero image -->
-    <link rel="preload" as="image" href="hero-banner.jpg" fetchpriority="high">
     <title>Prestige Auto Group</title>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJQHEY1FZF"></script>
@@ -753,8 +749,21 @@
     </button>
 
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script type="module" defer src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule defer src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+    window.addEventListener('load', function() {
+        var cb = function() {
+            var s = document.createElement('script');
+            s.type = 'module';
+            s.src = 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js';
+            document.body.appendChild(s);
+            var s2 = document.createElement('script');
+            s2.setAttribute('nomodule', '');
+            s2.src = 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js';
+            document.body.appendChild(s2);
+        };
+        'requestIdleCallback' in window ? requestIdleCallback(cb, {timeout: 2000}) : setTimeout(cb, 500);
+    });
+    </script>
 
 </body>
 </html>

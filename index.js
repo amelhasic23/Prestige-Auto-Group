@@ -623,18 +623,18 @@ function loadUserFavorites() {
     const currentUser = authManager.getCurrentUser();
     const userFavorites = getUserFavorites(currentUser.id);
 
-    // Apply favorite states to UI
-    userFavorites.forEach(carId => {
-        const button = document.getElementById(carId) ||
-                      document.querySelector(`[data-car-id="${carId}"]`);
+    // Batch: read all buttons first, then write in RAF to avoid forced reflow
+    const updates = userFavorites.map(carId => ({
+        carId,
+        button: document.getElementById(carId) || document.querySelector(`[data-car-id="${carId}"]`)
+    })).filter(({ button }) => button);
 
-        if (button) {
+    requestAnimationFrame(() => {
+        updates.forEach(({ button }) => {
             button.classList.add('active');
             const icon = button.querySelector('ion-icon');
-            if (icon) {
-                icon.setAttribute('name', 'heart');
-            }
-        }
+            if (icon) icon.setAttribute('name', 'heart');
+        });
     });
 
     console.log(`Loaded ${userFavorites.length} favorites for user:`, currentUser.name);
@@ -839,8 +839,7 @@ function initSwiper() {
         },
         pagination: {
             el: '.testimonials-pagination',
-            clickable: true,
-            dynamicBullets: true
+            clickable: true
         },
         navigation: {
             prevEl: '.testimonials-prev',
@@ -886,32 +885,33 @@ function initActiveNavLink() {
 
     const headerEl  = document.querySelector('[data-header]');
     let cachedHeaderH = 80;
+    let cachedOffsets = [];
 
-    // Cache header height on initialization with RAF to avoid forced reflow
-    requestAnimationFrame(() => {
-        cachedHeaderH = headerEl?.offsetHeight ?? 80;
-    });
+    function cacheLayoutValues() {
+        requestAnimationFrame(() => {
+            cachedHeaderH = headerEl?.offsetHeight ?? 80;
+            cachedOffsets = Array.from(sections).map(sec => ({
+                id: sec.getAttribute('id'),
+                top: sec.offsetTop
+            }));
+        });
+    }
 
-    // Update cached value on resize with passive listener
+    cacheLayoutValues();
+
     let resizeTimeout;
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(() => {
-            requestAnimationFrame(() => {
-                cachedHeaderH = headerEl?.offsetHeight ?? 80;
-            });
-        }, 150);
+        resizeTimeout = setTimeout(cacheLayoutValues, 150);
     }, { passive: true });
 
     _updateActiveNavLink = function() {
-        const scrollY   = window.scrollY;
-        const headerH   = cachedHeaderH;
-        let   current   = '';
+        const scrollY = window.scrollY;
+        const headerH = cachedHeaderH;
+        let current   = '';
 
-        sections.forEach(sec => {
-            if (scrollY >= sec.offsetTop - headerH - 8) {
-                current = sec.getAttribute('id');
-            }
+        cachedOffsets.forEach(({ id, top }) => {
+            if (scrollY >= top - headerH - 8) current = id;
         });
 
         navLinks.forEach(link => {
