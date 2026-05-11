@@ -1913,8 +1913,8 @@ button, a {
 .testimonials-swiper .swiper-pagination-bullet {
     background: transparent !important;
     opacity: 1;
-    width: 44px !important;
-    height: 44px !important;
+    width: 48px !important;
+    height: 48px !important;
     margin: 0 2px !important;
     padding: 0;
     position: relative;
