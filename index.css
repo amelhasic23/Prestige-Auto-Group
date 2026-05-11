@@ -661,7 +661,10 @@ button, a {
     gap: 36px;
     min-height: 100svh;
     position: relative;
-    background-image: url('Car Images/download (2).jpg');
+    background-image: image-set(
+        url('hero-banner.webp') type('image/webp'),
+        url('Car Images/download (2).jpg') type('image/jpeg')
+    );
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1910,12 +1913,27 @@ button, a {
 .testimonials-swiper .swiper-pagination-bullet {
     background: rgba(255, 255, 255, 0.35);
     opacity: 1;
-    width: 8px;
-    height: 8px;
+    width: 12px;
+    height: 12px;
+    margin: 0 6px !important;
+    padding: 18px;
+    position: relative;
     transition: width 0.3s ease, background 0.3s ease, border-radius 0.3s ease;
 }
 
-.testimonials-swiper .swiper-pagination-bullet-active {
+.testimonials-swiper .swiper-pagination-bullet::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+}
+
+.testimonials-swiper .swiper-pagination-bullet-active::before {
     background: var(--gold);
     width: 24px;
     border-radius: 4px;

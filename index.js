@@ -262,6 +262,30 @@ document.addEventListener('keydown', function(e) {
 });
 
 // ========================================
+// Contact Float Button
+// ========================================
+
+/**
+ * Toggle contact options float menu
+ */
+function toggleContactOptions() {
+    const options = document.querySelector('.contact-options');
+    if (options) {
+        options.classList.toggle('active');
+    }
+}
+
+// Close contact options when clicking outside
+document.addEventListener('click', function(event) {
+    const contactBtn = document.getElementById('contact-float-btn');
+    const options = document.querySelector('.contact-options');
+
+    if (contactBtn && options && !contactBtn.contains(event.target)) {
+        options.classList.remove('active');
+    }
+});
+
+// ========================================
 // Authentication Integration
 // ========================================
 
@@ -622,10 +646,13 @@ function loadUserFavorites() {
 
 // Initialize dynamic year in footer
 document.addEventListener('DOMContentLoaded', function() {
-    const yearElement = document.getElementById('year');
-    if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-    }
+    // Batch DOM reads and writes to avoid forced reflow
+    requestAnimationFrame(() => {
+        const yearElement = document.getElementById('year');
+        if (yearElement) {
+            yearElement.textContent = new Date().getFullYear();
+        }
+    });
 
     // Initialize back to top button
     initializeBackToTop();
@@ -858,8 +885,23 @@ function initActiveNavLink() {
     if (!navLinks.length || !sections.length) return;
 
     const headerEl  = document.querySelector('[data-header]');
-    let cachedHeaderH = headerEl?.offsetHeight ?? 80;
-    window.addEventListener('resize', () => { cachedHeaderH = headerEl?.offsetHeight ?? 80; }, { passive: true });
+    let cachedHeaderH = 80;
+
+    // Cache header height on initialization with RAF to avoid forced reflow
+    requestAnimationFrame(() => {
+        cachedHeaderH = headerEl?.offsetHeight ?? 80;
+    });
+
+    // Update cached value on resize with passive listener
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            requestAnimationFrame(() => {
+                cachedHeaderH = headerEl?.offsetHeight ?? 80;
+            });
+        }, 150);
+    }, { passive: true });
 
     _updateActiveNavLink = function() {
         const scrollY   = window.scrollY;

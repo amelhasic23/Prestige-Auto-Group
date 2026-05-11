@@ -8,11 +8,13 @@
     <meta name="author" content="Prestige Auto Group">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://prestigeautorent.netlify.app/">
-    <link rel="stylesheet" href="index.css">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <!-- Preload LCP hero image with high priority -->
+    <link rel="preload" as="image" href="hero-banner.webp" type="image/webp" fetchpriority="high">
+    <link rel="preload" as="image" href="hero-banner.jpg" fetchpriority="high">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Prestige Auto Car Sarajevo">
@@ -28,9 +30,22 @@
     <link rel="icon" type="image/jpeg" href="viber_image_2026-04-22_11-03-51-142.jpg">
     <link rel="shortcut icon" href="viber_image_2026-04-22_11-03-51-142.jpg">
     <link rel="apple-touch-icon" href="viber_image_2026-04-22_11-03-51-142.jpg">
+
+    <!-- Inline Critical CSS -->
+    <style>
+    :root{--white:#fff;--alice-blue-1:#f8f9fc;--alice-blue-4:#e2e8f0;--carolina-purple:#1e3a8a;--eerie-black:#0f172a;--space-cadet:#0f172a;--independence:#475569;--mannate:#6b7280;--medium-seagreen:#16a34a;--red-salsa:#ef4444;--sapphire:#1e40af;--blue-jeans:#3b82f6;--slate-blue:#2563eb;--gold:#f59e0b;--gold-light:#fef3c7;--gradient:linear-gradient(to bottom,#fff,#f8f9fc);--ff-quicksand:'Inter',system-ui,-apple-system,sans-serif;--ff-open-sans:'Inter',system-ui,-apple-system,sans-serif;--fs-1:2.5rem;--fs-2:2rem;--fs-3:1.5rem;--fs-4:1.25rem;--fs-5:1.0625rem;--fs-6:.9375rem;--fw-400:400;--fw-500:500;--fw-600:600;--fw-700:700;--transition:.25s ease;--radius-10:6px;--radius-14:10px;--radius-18:14px;--shadow-1:0 1px 3px rgba(15,23,42,.06),0 4px 16px rgba(15,23,42,.04);--shadow-2:0 4px 16px rgba(30,58,138,.14),0 12px 40px rgba(30,58,138,.09);--glass-bg:rgba(255,255,255,.82);--glass-border:rgba(255,255,255,.55);--section-alt:#f0f4ff;--section-dark:#0f172a;--ease-out-expo:cubic-bezier(.16,1,.3,1);--transition-slow:.5s cubic-bezier(.16,1,.3,1);--radius-full:9999px}*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{font-family:var(--ff-quicksand);color:var(--eerie-black);font-size:1rem;line-height:1.75;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;scroll-behavior:smooth;overflow-x:hidden}body{background:var(--white);overflow-x:hidden;max-width:100%}.container{padding-inline:15px;width:100%;margin-left:auto;margin-right:auto;position:relative}.header{background:0 0;backdrop-filter:none;-webkit-backdrop-filter:none;position:fixed;top:0;left:0;width:100%;transition:background .4s ease,box-shadow .4s ease,border-color .4s ease,backdrop-filter .4s ease;z-index:4;border-bottom:1px solid transparent}.header.active{background:rgba(255,255,255,.96);backdrop-filter:blur(20px) saturate(1.8);-webkit-backdrop-filter:blur(20px) saturate(1.8);box-shadow:0 2px 24px rgba(15,23,42,.08);border-bottom:1px solid var(--glass-border)}.header .container{height:70px;display:flex;align-items:center;justify-content:space-between;position:relative;padding:0 20px;gap:12px}.logo{flex-shrink:0;z-index:5;display:flex;align-items:center;padding:8px 12px;border-radius:var(--radius-10);transition:var(--transition)}.logo img{height:60px;width:auto;object-fit:contain;border-radius:8px;transition:var(--transition)}.header-right{display:flex;align-items:center;gap:12px;margin-left:auto;flex-shrink:0;justify-content:center;position:relative;z-index:8}.header-actions{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-shrink:0;min-width:0}.explore-btn{--background:var(--carolina-purple);--color:var(--white);display:flex;align-items:center;gap:6px;padding:0 14px;height:38px;border-radius:var(--radius-10);font-size:var(--fs-6);white-space:nowrap;flex-shrink:0}.hero{padding-top:88px;padding-inline:20px;padding-bottom:60px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:36px;min-height:100svh;position:relative;background-image:url('Car Images/download (2).jpg');background-size:cover;background-position:center;background-repeat:no-repeat;overflow:hidden}.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.55) 0%,rgba(0,0,0,.35) 60%,rgba(0,0,0,.6) 100%);z-index:0}.hero-content{text-align:center;max-width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;z-index:1}.hero-title{max-width:100%;margin-bottom:16px;font-size:2rem;line-height:1.2;text-align:center;color:#fff;font-family:var(--ff-quicksand);font-weight:var(--fw-700);letter-spacing:-.025em;text-transform:uppercase}.hero-text{color:rgba(255,255,255,.88);font-size:var(--fs-5);line-height:1.75;margin-bottom:0;max-width:48ch;text-align:center;margin-left:auto;margin-right:auto}.btn{position:relative;background:var(--background,var(--carolina-purple));color:var(--color,var(--white));padding:10px 22px;display:grid;place-items:center;border-radius:var(--radius-14);font-family:var(--ff-quicksand);font-size:var(--fs-6);font-weight:var(--fw-600);overflow:hidden;letter-spacing:.01em;border:none;cursor:pointer;transition:var(--transition)}
+    </style>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+
+    <!-- Load full CSS asynchronously -->
+    <link rel="preload" href="index.css" as="style">
+    <link rel="stylesheet" href="index.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="index.css"></noscript>
     <!-- Preload LCP hero image -->
     <link rel="preload" as="image" href="hero-banner.jpg" fetchpriority="high">
     <title>Prestige Auto Group</title>
@@ -49,7 +64,10 @@
         <div class="container">
         <div class="overlay" data-overlay onclick="toggleMobileMenu()"></div>
         <a href="#" class="logo">
-            <img src="viber_image_2026-04-22_11-03-51-142.jpg" alt="Prestige Car Rental Logo" width="120" height="60">
+            <picture>
+                <source srcset="viber_image_2026-04-22_11-03-51-142.webp" type="image/webp">
+                <img src="viber_image_2026-04-22_11-03-51-142.jpg" alt="Prestige Car Rental Logo" width="120" height="60" loading="eager">
+            </picture>
         </a>
 
         <nav class="navbar" data-navbar id="navbar">
@@ -109,31 +127,6 @@
             </button>
         </div>
 
-        <script>
-            function toggleMobileMenu() {
-                const navbar = document.getElementById('navbar');
-                const overlay = document.querySelector('[data-overlay]');
-                const menuToggle = document.getElementById('menuToggle');
-
-                if (navbar && overlay && menuToggle) {
-                    navbar.classList.toggle('active');
-                    overlay.classList.toggle('active');
-                    menuToggle.classList.toggle('active');
-                }
-            }
-
-            function closeMobileMenu() {
-                const navbar = document.getElementById('navbar');
-                const overlay = document.querySelector('[data-overlay]');
-                const menuToggle = document.getElementById('menuToggle');
-
-                if (navbar && overlay && menuToggle) {
-                    navbar.classList.remove('active');
-                    overlay.classList.remove('active');
-                    menuToggle.classList.remove('active');
-                }
-            }
-        </script>
         </div>
     </header>
 
@@ -177,7 +170,10 @@
                     <li class="reveal reveal-delay-1">
                         <div class="featured-car-card">
                             <figure class="card-banner">
-                                <img src="./images/car-1.jpg" alt="Škoda Karoq 2018" loading="lazy" width="440" height="300" class="w-100">
+                                <picture>
+                                    <source srcset="./images/car-1.webp" type="image/webp">
+                                    <img src="./images/car-1.jpg" alt="Škoda Karoq 2018" loading="lazy" width="440" height="300" class="w-100">
+                                </picture>
                             </figure>
                             <div class="card-content">
                                 <div class="card-title-wrapper">
@@ -212,7 +208,10 @@
                     <li class="reveal reveal-delay-2">
                         <div class="featured-car-card">
                             <figure class="card-banner">
-                                <img src="./images/car-2.jpg" alt="Volkswagen Polo 2019" loading="lazy" width="440" height="300" class="w-100">
+                                <picture>
+                                    <source srcset="./images/car-2.webp" type="image/webp">
+                                    <img src="./images/car-2.jpg" alt="Volkswagen Polo 2019" loading="lazy" width="440" height="300" class="w-100">
+                                </picture>
                             </figure>
                             <div class="card-content">
                                 <div class="card-title-wrapper">
@@ -247,7 +246,10 @@
                     <li class="reveal reveal-delay-3">
                         <div class="featured-car-card">
                             <figure class="card-banner">
-                                <img src="./images/car-3.jpg" alt="Volvo V60 2019" loading="lazy" width="440" height="300" class="w-100">
+                                <picture>
+                                    <source srcset="./images/car-3.webp" type="image/webp">
+                                    <img src="./images/car-3.jpg" alt="Volvo V60 2019" loading="lazy" width="440" height="300" class="w-100">
+                                </picture>
                             </figure>
                             <div class="card-content">
                                 <div class="card-title-wrapper">
@@ -282,7 +284,10 @@
                     <li class="reveal reveal-delay-1">
                         <div class="featured-car-card">
                             <figure class="card-banner">
-                                <img src="./images/car-4.jpg" alt="Volkswagen Polo 2016" loading="lazy" width="440" height="300" class="w-100">
+                                <picture>
+                                    <source srcset="./images/car-4.webp" type="image/webp">
+                                    <img src="./images/car-4.jpg" alt="Volkswagen Polo 2016" loading="lazy" width="440" height="300" class="w-100">
+                                </picture>
                             </figure>
                             <div class="card-content">
                                 <div class="card-title-wrapper">
@@ -317,7 +322,10 @@
                     <li class="reveal reveal-delay-2">
                         <div class="featured-car-card">
                             <figure class="card-banner">
-                                <img src="./images/car-5.jpg" alt="Volkswagen Golf 2019" loading="lazy" width="440" height="300" class="w-100">
+                                <picture>
+                                    <source srcset="./images/car-5.webp" type="image/webp">
+                                    <img src="./images/car-5.jpg" alt="Volkswagen Golf 2019" loading="lazy" width="440" height="300" class="w-100">
+                                </picture>
                             </figure>
                             <div class="card-content">
                                 <div class="card-title-wrapper">
@@ -352,7 +360,10 @@
                     <li class="reveal reveal-delay-3">
                         <div class="featured-car-card">
                             <figure class="card-banner">
-                                <img src="./images/car-6.jpg" alt="Volkswagen Polo 2018" loading="lazy" width="440" height="300" class="w-100">
+                                <picture>
+                                    <source srcset="./images/car-6.webp" type="image/webp">
+                                    <img src="./images/car-6.jpg" alt="Volkswagen Polo 2018" loading="lazy" width="440" height="300" class="w-100">
+                                </picture>
                             </figure>
                             <div class="card-content">
                                 <div class="card-title-wrapper">
@@ -517,23 +528,6 @@
                 </ul>
             </div>
 
-            <script>
-                function toggleFAQ(faqId) {
-                    const faqItem = document.getElementById(faqId);
-                    const isActive = faqItem.classList.contains('active');
-
-                    // Close all other FAQ items
-                    const allFAQs = document.querySelectorAll('.faq-item');
-                    allFAQs.forEach(item => {
-                        if (item !== faqItem) {
-                            item.classList.remove('active');
-                        }
-                    });
-
-                    // Toggle current FAQ item
-                    faqItem.classList.toggle('active', !isActive);
-                }
-            </script>
         </section>
 
         <!-- Testimonials Section -->
@@ -541,9 +535,9 @@
             <div class="container">
                 <h2 class="h2 section-title" id="testimonials-label" data-i18n="testimonials.title">Reference / Svjedočanstva</h2>
 
-                <div class="swiper testimonials-swiper">
-                    <ul class="swiper-wrapper">
-                        <li class="swiper-slide testimonials-item" id="testimonial-panel-0" role="tabpanel" aria-labelledby="testimonial-tab-0" tabindex="0">
+                <div class="swiper testimonials-swiper" role="region" aria-label="Customer testimonials carousel">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide testimonials-item">
                                 <div class="testimonials-card">
                                     <div class="testimonial-content">
                                         <p class="testimonial-text" data-i18n="testimonials.testimonial1.text">"Vrhunska usluga i profesionalan pristup. Sve preporuke."</p>
@@ -555,9 +549,9 @@
                                         <p class="customer-name" data-i18n="testimonials.testimonial1.author">Zadovoljan kupac</p>
                                     </div>
                                 </div>
-                            </li>
+                            </div>
 
-                        <li class="swiper-slide testimonials-item" id="testimonial-panel-1" role="tabpanel" aria-labelledby="testimonial-tab-1" tabindex="0">
+                        <div class="swiper-slide testimonials-item">
                                 <div class="testimonials-card">
                                     <div class="testimonial-content">
                                         <p class="testimonial-text" data-i18n="testimonials.testimonial2.text">"Jednostavno, brzo i pouzdano – upravo ono što treba kada putujete."</p>
@@ -569,9 +563,9 @@
                                         <p class="customer-name" data-i18n="testimonials.testimonial2.author">Zadovoljan kupac</p>
                                     </div>
                                 </div>
-                            </li>
+                            </div>
 
-                        <li class="swiper-slide testimonials-item" id="testimonial-panel-2" role="tabpanel" aria-labelledby="testimonial-tab-2" tabindex="0">
+                        <div class="swiper-slide testimonials-item">
                                 <div class="testimonials-card">
                                     <div class="testimonial-content">
                                         <p class="testimonial-text" data-i18n="testimonials.testimonial3.text">"Odlična vozila i fleksibilni uslovi. Sigurno ćemo ponovo koristiti usluge."</p>
@@ -583,12 +577,12 @@
                                         <p class="customer-name" data-i18n="testimonials.testimonial3.author">Zadovoljan kupac</p>
                                     </div>
                                 </div>
-                            </li>
-                    </ul>
+                            </div>
+                    </div>
 
-                    <div class="swiper-pagination testimonials-pagination"></div>
-                    <div class="swiper-button-prev testimonials-prev"></div>
-                    <div class="swiper-button-next testimonials-next"></div>
+                    <div class="swiper-pagination testimonials-pagination" role="group" aria-label="Testimonial pagination"></div>
+                    <div class="swiper-button-prev testimonials-prev" role="button" aria-label="Previous testimonial"></div>
+                    <div class="swiper-button-next testimonials-next" role="button" aria-label="Next testimonial"></div>
                 </div>
             </div>
         </section>
@@ -666,7 +660,10 @@
                 <div class="footer-top">
                     <div class="footer-brand">
                         <a href="#" class="logo">
-                            <img src="viber_image_2026-04-22_11-03-51-142.jpg" alt="Prestige Auto Rental Logo" width="37" height="55" loading="lazy">
+                            <picture>
+                                <source srcset="viber_image_2026-04-22_11-03-51-142.webp" type="image/webp">
+                                <img src="viber_image_2026-04-22_11-03-51-142.jpg" alt="Prestige Auto Rental Logo" width="37" height="55" loading="lazy">
+                            </picture>
                         </a>
                         <p class="footer-text" data-i18n="footer.brand_description">
                             Sva naša vozila su potpuno kasko osigurana, redovno održavana i spremna za sigurno i udobno putovanje.
@@ -754,22 +751,6 @@
     <button id="back-to-top" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
         <ion-icon name="chevron-up-outline"></ion-icon>
     </button>
-    <script>
-        function toggleContactOptions() {
-            const options = document.querySelector('.contact-options');
-            options.classList.toggle('active');
-        }
-
-        // Close contact options when clicking outside
-        document.addEventListener('click', function(event) {
-            const contactBtn = document.getElementById('contact-float-btn');
-            const options = document.querySelector('.contact-options');
-
-            if (!contactBtn.contains(event.target)) {
-                options.classList.remove('active');
-            }
-        });
-    </script>
 
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" defer src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
