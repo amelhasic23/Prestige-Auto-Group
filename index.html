@@ -8,8 +8,8 @@
     <meta name="author" content="Prestige Auto Group">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://prestige-auto-group.onrender.com/">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
+    <link rel="preload" href="/css/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/swiper-bundle.min.css"></noscript>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <!-- Preload LCP hero image with high priority -->
@@ -40,14 +40,9 @@
     <link rel="preload" as="style" href="index.css" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="index.css"></noscript>
     <title>Prestige Auto Group</title>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJQHEY1FZF"></script>
+    <!-- Google Analytics — deferred to first user interaction to avoid blocking -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-QJQHEY1FZF');
+    (function(){var loaded=false;function loadGA(){if(loaded)return;loaded=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-QJQHEY1FZF';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('config','G-QJQHEY1FZF');}['scroll','click','touchstart','keydown'].forEach(function(e){document.addEventListener(e,loadGA,{once:true,passive:true});});setTimeout(loadGA,5000);})();
     </script>
 </head>
 <body>
@@ -163,7 +158,7 @@
                             <figure class="card-banner">
                                 <picture>
                                     <source srcset="./images/car-1.webp" type="image/webp">
-                                    <img src="./images/car-1.jpg" alt="Škoda Karoq 2018" loading="lazy" width="440" height="300" class="w-100">
+                                    <img src="./images/car-1.jpg" alt="Škoda Karoq 2018" loading="lazy" width="440" height="293" class="w-100">
                                 </picture>
                             </figure>
                             <div class="card-content">
@@ -201,7 +196,7 @@
                             <figure class="card-banner">
                                 <picture>
                                     <source srcset="./images/car-2.webp" type="image/webp">
-                                    <img src="./images/car-2.jpg" alt="Volkswagen Polo 2019" loading="lazy" width="440" height="300" class="w-100">
+                                    <img src="./images/car-2.jpg" alt="Volkswagen Polo 2019" loading="lazy" width="440" height="293" class="w-100">
                                 </picture>
                             </figure>
                             <div class="card-content">
@@ -239,7 +234,7 @@
                             <figure class="card-banner">
                                 <picture>
                                     <source srcset="./images/car-3.webp" type="image/webp">
-                                    <img src="./images/car-3.jpg" alt="Volvo V60 2019" loading="lazy" width="440" height="300" class="w-100">
+                                    <img src="./images/car-3.jpg" alt="Volvo V60 2019" loading="lazy" width="440" height="293" class="w-100">
                                 </picture>
                             </figure>
                             <div class="card-content">
@@ -277,7 +272,7 @@
                             <figure class="card-banner">
                                 <picture>
                                     <source srcset="./images/car-4.webp" type="image/webp">
-                                    <img src="./images/car-4.jpg" alt="Volkswagen Polo 2016" loading="lazy" width="440" height="300" class="w-100">
+                                    <img src="./images/car-4.jpg" alt="Volkswagen Polo 2016" loading="lazy" width="440" height="293" class="w-100">
                                 </picture>
                             </figure>
                             <div class="card-content">
@@ -315,7 +310,7 @@
                             <figure class="card-banner">
                                 <picture>
                                     <source srcset="./images/car-5.webp" type="image/webp">
-                                    <img src="./images/car-5.jpg" alt="Volkswagen Golf 2019" loading="lazy" width="440" height="300" class="w-100">
+                                    <img src="./images/car-5.jpg" alt="Volkswagen Golf 2019" loading="lazy" width="440" height="293" class="w-100">
                                 </picture>
                             </figure>
                             <div class="card-content">
@@ -353,7 +348,7 @@
                             <figure class="card-banner">
                                 <picture>
                                     <source srcset="./images/car-6.webp" type="image/webp">
-                                    <img src="./images/car-6.jpg" alt="Volkswagen Polo 2018" loading="lazy" width="440" height="300" class="w-100">
+                                    <img src="./images/car-6.jpg" alt="Volkswagen Polo 2018" loading="lazy" width="440" height="293" class="w-100">
                                 </picture>
                             </figure>
                             <div class="card-content">
@@ -743,16 +738,11 @@
         <ion-icon name="chevron-up-outline"></ion-icon>
     </button>
 
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="/js/swiper-bundle.min.js"></script>
     <script>
     window.addEventListener('load', function() {
         var cb = function() {
-            // Google Fonts — load after page is interactive to avoid critical path
-            var fl = document.createElement('link');
-            fl.rel = 'stylesheet';
-            fl.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
-            document.head.appendChild(fl);
-            // Ionicons — jsDelivr for better CDN performance
+            // Ionicons — jsDelivr
             var s = document.createElement('script');
             s.type = 'module';
             s.src = 'https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js';

@@ -657,8 +657,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize back to top button
     initializeBackToTop();
 
-    // Initialize testimonials Swiper slider
-    initSwiper();
+    // Initialize testimonials Swiper only when the section scrolls into view
+    var swiperTarget = document.querySelector('.testimonials-swiper');
+    if (swiperTarget) {
+        var swiperObserver = new IntersectionObserver(function(entries) {
+            if (entries[0].isIntersecting) {
+                initSwiper();
+                swiperObserver.disconnect();
+            }
+        }, { rootMargin: '200px' });
+        swiperObserver.observe(swiperTarget);
+    }
 
     // Initialize scroll reveal animations
     initScrollReveal();
