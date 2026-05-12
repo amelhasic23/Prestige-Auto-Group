@@ -909,7 +909,7 @@ function initActiveNavLink() {
         });
     }
 
-    cacheLayoutValues();
+    window.addEventListener('load', cacheLayoutValues, { once: true });
 
     let resizeTimeout;
     window.addEventListener('resize', () => {
