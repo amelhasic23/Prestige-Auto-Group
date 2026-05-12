@@ -662,7 +662,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (swiperTarget) {
         var swiperObserver = new IntersectionObserver(function(entries) {
             if (entries[0].isIntersecting) {
-                initSwiper();
+                var swiperScript = document.createElement('script');
+                swiperScript.src = '/js/swiper-bundle.min.js';
+                swiperScript.onload = initSwiper;
+                document.body.appendChild(swiperScript);
                 swiperObserver.disconnect();
             }
         }, { rootMargin: '200px' });

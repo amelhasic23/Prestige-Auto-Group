@@ -42,7 +42,7 @@
     <title>Prestige Auto Group</title>
     <!-- Google Analytics — deferred to first user interaction to avoid blocking -->
     <script>
-    (function(){var loaded=false;function loadGA(){if(loaded)return;loaded=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-QJQHEY1FZF';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('config','G-QJQHEY1FZF');}['scroll','click','touchstart','keydown'].forEach(function(e){document.addEventListener(e,loadGA,{once:true,passive:true});});setTimeout(loadGA,5000);})();
+    (function(){var loaded=false;function loadGA(){if(loaded)return;loaded=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-QJQHEY1FZF';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('config','G-QJQHEY1FZF');}['scroll','click','touchstart','keydown'].forEach(function(e){document.addEventListener(e,loadGA,{once:true,passive:true});});setTimeout(loadGA,12000);})();
     </script>
 </head>
 <body>
@@ -738,11 +738,9 @@
         <ion-icon name="chevron-up-outline"></ion-icon>
     </button>
 
-    <script defer src="/js/swiper-bundle.min.js"></script>
     <script>
     window.addEventListener('load', function() {
-        var cb = function() {
-            // Ionicons — jsDelivr
+        setTimeout(function() {
             var s = document.createElement('script');
             s.type = 'module';
             s.src = 'https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js';
@@ -751,8 +749,7 @@
             s2.setAttribute('nomodule', '');
             s2.src = 'https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.js';
             document.body.appendChild(s2);
-        };
-        'requestIdleCallback' in window ? requestIdleCallback(cb, {timeout: 2000}) : setTimeout(cb, 500);
+        }, 10000);
     });
     </script>
 
