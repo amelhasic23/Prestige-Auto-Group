@@ -1,0 +1,84 @@
+services:
+  - type: web
+    name: prestige-auto-group
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: .
+
+    headers:
+
+      # HTML: never cache, always revalidate
+      - path: /
+        name: Cache-Control
+        value: public, max-age=0, must-revalidate
+      - path: /*.html
+        name: Cache-Control
+        value: public, max-age=0, must-revalidate
+
+      # CSS + JS: 1-year immutable (minified by build step)
+      - path: /*.css
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /*.js
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+
+      # Image assets: 1-year immutable
+      - path: /*.jpg
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /*.jpeg
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /*.webp
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /*.png
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /*.svg
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /*.woff2
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /*.woff
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+
+      # Subdirectory assets: 1-year immutable
+      - path: /images/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /css/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /js/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /i18n/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+
+      # Security headers — applied to every path
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: X-XSS-Protection
+        value: 1; mode=block
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /*
+        name: Permissions-Policy
+        value: geolocation=(), microphone=(), camera=()
+
+      # Content Security Policy
+      # 'unsafe-inline' required: index.html has two inline <script> blocks (gtag init + requestIdleCallback loader)
+      - path: /*
+        name: Content-Security-Policy
+        value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com; frame-ancestors 'none'"
